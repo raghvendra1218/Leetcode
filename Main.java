@@ -8,9 +8,10 @@ public class Main {
         //AtleastTwiceInArray
 //        AtleastTwiceInArray a = new AtleastTwiceInArray();
 //        int index = a.dominantIndex(nums);
+//        System.out.println("Dominant Index is : " + index);
         //PivotIndex
         PivotIndex p = new PivotIndex();
         int index = p.pivotIndex(nums);
-        System.out.println("Dominant Index is : " + index);
+        System.out.println("Pivot Index is : " + index);
     }
 }
