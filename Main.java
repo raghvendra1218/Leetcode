@@ -41,10 +41,15 @@ public class Main {
         //Dynamic Programming approach:
 //        System.out.println("Number of ways for N = 4: with Dynamic Programming "+ staircaseProblem.num_ways_bottom_up(4));
         // TwoSum
-        int [] nums = {3,2,4};
-        TwoSum twoSum = new TwoSum();
-        int[] result = twoSum.twoSum(nums,6);
-        System.out.println("Resultant array: "+ Arrays.toString(result));
-
+//        int [] nums = {3,2,4};
+//        TwoSum twoSum = new TwoSum();
+//        int[] result = twoSum.twoSum(nums,6);
+//        System.out.println("Resultant array: "+ Arrays.toString(result));
+        //Reverse String
+        char[] s = {'h','e','l','l','o'};
+//        char[] s = {'H','a','n','n','a','h};
+        ReverseString reverseString = new ReverseString();
+        reverseString.reverseString(s);
+        System.out.println("Resultant Array: "+ Arrays.toString(s));
     }
 }
