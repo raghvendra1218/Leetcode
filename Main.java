@@ -1,7 +1,5 @@
 package com.raghvendra;
 
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -46,10 +44,15 @@ public class Main {
 //        int[] result = twoSum.twoSum(nums,6);
 //        System.out.println("Resultant array: "+ Arrays.toString(result));
         //Reverse String
-        char[] s = {'h','e','l','l','o'};
-//        char[] s = {'H','a','n','n','a','h};
-        ReverseString reverseString = new ReverseString();
-        reverseString.reverseString(s);
-        System.out.println("Resultant Array: "+ Arrays.toString(s));
+//        char[] s = {'h','e','l','l','o'};
+////        char[] s = {'H','a','n','n','a','h};
+//        ReverseString reverseString = new ReverseString();
+//        reverseString.reverseString(s);
+//        System.out.println("Resultant Array: "+ Arrays.toString(s));
+        //Reverse Words In a String
+        String s = "the sky is   blue";
+        ReverseWordsInAString reverseWordsInAString = new ReverseWordsInAString();
+        String resultantString = reverseWordsInAString.reverseWords(s);
+        System.out.println("Resultant String : "+ resultantString);
     }
 }
