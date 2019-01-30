@@ -50,9 +50,17 @@ public class Main {
 //        reverseString.reverseString(s);
 //        System.out.println("Resultant Array: "+ Arrays.toString(s));
         //Reverse Words In a String
-        String s = "the sky is   blue";
-        ReverseWordsInAString reverseWordsInAString = new ReverseWordsInAString();
-        String resultantString = reverseWordsInAString.reverseWords(s);
-        System.out.println("Resultant String : "+ resultantString);
+//        String s = "the sky is   blue";
+//        ReverseWordsInAString reverseWordsInAString = new ReverseWordsInAString();
+//        String resultantString = reverseWordsInAString.reverseWords(s);
+//        System.out.println("Resultant String : "+ resultantString);
+        //String to Integer
+//        String s = " ";
+//        StringToInteger stringToInteger = new StringToInteger();
+//        System.out.println("Result:"+ stringToInteger.myAtoi(s));
+        //Valid Palindrome
+        String s = "A man, a plan, a canal: Panama";
+        ValidPalindrome vp = new ValidPalindrome();
+        System.out.println(vp.isPalindrome(s) ? "Sentence is a Palindrome" : "Sentence is not a Palindrome");
     }
 }
