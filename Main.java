@@ -59,8 +59,16 @@ public class Main {
 //        StringToInteger stringToInteger = new StringToInteger();
 //        System.out.println("Result:"+ stringToInteger.myAtoi(s));
         //Valid Palindrome
-        String s = "A man, a plan, a canal: Panama";
-        ValidPalindrome vp = new ValidPalindrome();
-        System.out.println(vp.isPalindrome(s) ? "Sentence is a Palindrome" : "Sentence is not a Palindrome");
+//        String s = "A man, a plan, a canal: Panama";
+//        ValidPalindrome vp = new ValidPalindrome();
+//        System.out.println(vp.isPalindrome(s) ? "Sentence is a Palindrome" : "Sentence is not a Palindrome");
+        //Reverse Integer
+//        int a = 120;
+//        ReverseInteger ri = new ReverseInteger();
+//        System.out.println("Reversed integer: "+ ri.reverse(a));
+        //Valid Parentheses
+        String str = "]";
+        ValidParentheses validParentheses = new ValidParentheses();
+        System.out.println("String is Valid Parentheses: "+ validParentheses.isValid(str));
     }
 }
