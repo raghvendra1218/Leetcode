@@ -67,8 +67,25 @@ public class Main {
 //        ReverseInteger ri = new ReverseInteger();
 //        System.out.println("Reversed integer: "+ ri.reverse(a));
         //Valid Parentheses
-        String str = "]";
-        ValidParentheses validParentheses = new ValidParentheses();
-        System.out.println("String is Valid Parentheses: "+ validParentheses.isValid(str));
+//        String str = "]";
+//        ValidParentheses validParentheses = new ValidParentheses();
+//        System.out.println("String is Valid Parentheses: "+ validParentheses.isValid(str));
+        //Tower of Hanoi
+//        TowerOfHanoi towerOfHanoi = new TowerOfHanoi();
+//        towerOfHanoi.towerOfHanoi(3,'A','C','B');
+        //Array in sorted order with Recursion
+//        int[] A = {1,2,3,4,5,6};
+//        ArrayInSortedOrderWithRecursion AISOR  = new ArrayInSortedOrderWithRecursion();
+//        System.out.println(AISOR.isArraySortedOrder(A,5));
+        //Sum of Two Strings
+//        String s1 = "823456789";
+//        String s2 = "823456789";
+//        SumTwoStrings sumTwoStrings = new SumTwoStrings();
+//        System.out.println(sumTwoStrings.sum(s1,s2));
+        //Single Number
+        int[] nums = {1,3,1,-1,3};
+        SingleNumber singleNumber= new SingleNumber();
+        System.out.println(singleNumber.singleNumber(nums));
+
     }
 }
