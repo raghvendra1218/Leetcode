@@ -103,8 +103,13 @@ public class Main {
 //        MaximumSubarray maximumSubarray = new MaximumSubarray();
 //        System.out.println("Resultant maximum Sum of Subarray:  "+maximumSubarray.maxSubArray(nums));
         //Missing Number
-        int[] nums = {9,6,4,2,3,5,7,0,1};
-        MissingNumber missingNumber = new MissingNumber();
-        System.out.println("Missing Number: "+ missingNumber.missingNumber(nums));
+//        int[] nums = {9,6,4,2,3,5,7,0,1};
+//        MissingNumber missingNumber = new MissingNumber();
+//        System.out.println("Missing Number: "+ missingNumber.missingNumber(nums));
+        //Most Frequently Used Word
+//        String str = "jack and jill to buy bread and cheese cheese is jack favourite food";
+//        List<String> arr= new ArrayList<>(Arrays.asList("and", "he", "the", "to", "is"));
+//        MostFrequentlyUsedWord mostFrequentlyUsedWord = new MostFrequentlyUsedWord();
+//        mostFrequentlyUsedWord.retrieveMostFrequentlyUseWords(str,arr);
     }
 }
