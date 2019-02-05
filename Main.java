@@ -63,7 +63,7 @@ public class Main {
 //        ValidPalindrome vp = new ValidPalindrome();
 //        System.out.println(vp.isPalindrome(s) ? "Sentence is a Palindrome" : "Sentence is not a Palindrome");
         //Reverse Integer
-//        int a = 120;
+//        int a = 578;
 //        ReverseInteger ri = new ReverseInteger();
 //        System.out.println("Reversed integer: "+ ri.reverse(a));
         //Valid Parentheses
@@ -83,9 +83,28 @@ public class Main {
 //        SumTwoStrings sumTwoStrings = new SumTwoStrings();
 //        System.out.println(sumTwoStrings.sum(s1,s2));
         //Single Number
-        int[] nums = {1,3,1,-1,3};
-        SingleNumber singleNumber= new SingleNumber();
-        System.out.println(singleNumber.singleNumber(nums));
-
+//        int[] nums = {1,3,1,-1,3};
+//        SingleNumber singleNumber= new SingleNumber();
+//        System.out.println(singleNumber.singleNumber(nums));
+        //Remove Duplicates from Sorted Array
+//        int [] nums = {-3,-1,0,0,0,3,3};
+//        RemoveDuplicatesSortedArray removeDuplicatesSortedArray = new RemoveDuplicatesSortedArray();
+//        System.out.println("Size: "+ removeDuplicatesSortedArray.removeDuplicates(nums));
+        //Squares of a Sorted Array
+//        int[] A = {-4,-1,0,3,10};
+//        SquaresOfSortedArray squaresOfSortedArray = new SquaresOfSortedArray();
+//        squaresOfSortedArray.sortedSquares(A);
+        //Move Zeros
+//        int[] nums = {2,1,0,9,8,0,7,1};
+//        MoveZeros moveZeros = new MoveZeros();
+//        moveZeros.moveZeroes(nums);
+        //Maximum Subarray
+//        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+//        MaximumSubarray maximumSubarray = new MaximumSubarray();
+//        System.out.println("Resultant maximum Sum of Subarray:  "+maximumSubarray.maxSubArray(nums));
+        //Missing Number
+        int[] nums = {9,6,4,2,3,5,7,0,1};
+        MissingNumber missingNumber = new MissingNumber();
+        System.out.println("Missing Number: "+ missingNumber.missingNumber(nums));
     }
 }
