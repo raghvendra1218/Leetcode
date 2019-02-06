@@ -111,5 +111,25 @@ public class Main {
 //        List<String> arr= new ArrayList<>(Arrays.asList("and", "he", "the", "to", "is"));
 //        MostFrequentlyUsedWord mostFrequentlyUsedWord = new MostFrequentlyUsedWord();
 //        mostFrequentlyUsedWord.retrieveMostFrequentlyUseWords(str,arr);
+        //Count And Say
+//        int n = 1;
+//        CountAndSay countAndSay = new CountAndSay();
+//        System.out.println(countAndSay.countAndSay(n));
+        //Merge Intervals
+//        List<MergeIntervals.Interval> intervals = new ArrayList<>();
+//        intervals.add(new MergeIntervals.Interval(0,8));
+//        intervals.add(new MergeIntervals.Interval(0,4));
+//        intervals.add(new MergeIntervals.Interval(1,4));
+//        intervals.add(new MergeIntervals.Interval(2,3));
+//        intervals.add(new MergeIntervals.Interval(5,10));
+//        intervals.add(new MergeIntervals.Interval(11,13));
+//        intervals.add(new MergeIntervals.Interval(15,18));
+//        MergeIntervals mergeIntervals = new MergeIntervals();
+//        intervals = mergeIntervals.merge(intervals);
+//        System.out.print("[");
+//        for(MergeIntervals.Interval I: intervals){
+//            System.out.print("["+I.start+"," + I.end+"],");
+//        }
+//        System.out.print("]");
     }
 }
