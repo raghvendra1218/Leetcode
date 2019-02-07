@@ -131,5 +131,9 @@ public class Main {
 //            System.out.print("["+I.start+"," + I.end+"],");
 //        }
 //        System.out.print("]");
+        //Fruit into Baskets
+        int[] tree = {1,2,3,2,2};
+        FruitIntoBaskets fruitIntoBaskets = new FruitIntoBaskets();
+        System.out.println("Maximum Fruits: "+fruitIntoBaskets.totalFruit(tree));
     }
 }
