@@ -112,9 +112,9 @@ public class Main {
 //        MostFrequentlyUsedWord mostFrequentlyUsedWord = new MostFrequentlyUsedWord();
 //        mostFrequentlyUsedWord.retrieveMostFrequentlyUseWords(str,arr);
         //Count And Say
-//        int n = 1;
-//        CountAndSay countAndSay = new CountAndSay();
-//        System.out.println(countAndSay.countAndSay(n));
+        int n = 5;
+        CountAndSay countAndSay = new CountAndSay();
+        System.out.println(countAndSay.countAndSay(n));
         //Merge Intervals
 //        List<MergeIntervals.Interval> intervals = new ArrayList<>();
 //        intervals.add(new MergeIntervals.Interval(0,8));
@@ -141,8 +141,11 @@ public class Main {
 //        AddBinary addBinary = new AddBinary();
 //        System.out.println("Result: "+ addBinary.addBinary(a,b));
         //Peak Index In A Mountain Array
-        int[] A = {0,1,0};
-        PeakIndexMountainArray peakIndexMountainArray = new PeakIndexMountainArray();
-        System.out.println("Index of Peak: "+ peakIndexMountainArray.peakIndexInMountainArray(A));
+//        int[] A = {0,1,0};
+//        PeakIndexMountainArray peakIndexMountainArray = new PeakIndexMountainArray();
+//        System.out.println("Index of Peak: "+ peakIndexMountainArray.peakIndexInMountainArray(A));
+        //Roman To Integer
+
+
     }
 }
