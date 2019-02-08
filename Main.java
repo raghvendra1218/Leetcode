@@ -132,8 +132,17 @@ public class Main {
 //        }
 //        System.out.print("]");
         //Fruit into Baskets
-        int[] tree = {1,2,3,2,2};
-        FruitIntoBaskets fruitIntoBaskets = new FruitIntoBaskets();
-        System.out.println("Maximum Fruits: "+fruitIntoBaskets.totalFruit(tree));
+//        int[] tree = {1,2,3,2,2};
+//        FruitIntoBaskets fruitIntoBaskets = new FruitIntoBaskets();
+//        System.out.println("Maximum Fruits: "+fruitIntoBaskets.totalFruit(tree));
+        //Add Binary
+//        String a ="11";
+//        String b ="1";
+//        AddBinary addBinary = new AddBinary();
+//        System.out.println("Result: "+ addBinary.addBinary(a,b));
+        //Peak Index In A Mountain Array
+        int[] A = {0,1,0};
+        PeakIndexMountainArray peakIndexMountainArray = new PeakIndexMountainArray();
+        System.out.println("Index of Peak: "+ peakIndexMountainArray.peakIndexInMountainArray(A));
     }
 }
