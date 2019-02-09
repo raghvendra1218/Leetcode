@@ -112,9 +112,9 @@ public class Main {
 //        MostFrequentlyUsedWord mostFrequentlyUsedWord = new MostFrequentlyUsedWord();
 //        mostFrequentlyUsedWord.retrieveMostFrequentlyUseWords(str,arr);
         //Count And Say
-        int n = 5;
-        CountAndSay countAndSay = new CountAndSay();
-        System.out.println(countAndSay.countAndSay(n));
+//        int n = 5;
+//        CountAndSay countAndSay = new CountAndSay();
+//        System.out.println(countAndSay.countAndSay(n));
         //Merge Intervals
 //        List<MergeIntervals.Interval> intervals = new ArrayList<>();
 //        intervals.add(new MergeIntervals.Interval(0,8));
@@ -145,7 +145,11 @@ public class Main {
 //        PeakIndexMountainArray peakIndexMountainArray = new PeakIndexMountainArray();
 //        System.out.println("Index of Peak: "+ peakIndexMountainArray.peakIndexInMountainArray(A));
         //Roman To Integer
-
-
+        //String Compression
+//        char[] chars = {'a'};
+//        StringCompression stringCompression = new StringCompression();
+//        System.out.println("Result: "+ stringCompression.compress(chars));
+        CountPrimes countPrimes = new CountPrimes();
+        System.out.println("Number of Primes: "+ countPrimes.countPrimes(4));
     }
 }
