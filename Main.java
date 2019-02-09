@@ -149,7 +149,11 @@ public class Main {
 //        char[] chars = {'a'};
 //        StringCompression stringCompression = new StringCompression();
 //        System.out.println("Result: "+ stringCompression.compress(chars));
-        CountPrimes countPrimes = new CountPrimes();
-        System.out.println("Number of Primes: "+ countPrimes.countPrimes(4));
+//        CountPrimes countPrimes = new CountPrimes();
+//        System.out.println("Number of Primes: "+ countPrimes.countPrimes(10));
+        //First Unique Character in a String
+        String str = "loveleetcode";
+        FirstUniqueCharacterInString unique = new FirstUniqueCharacterInString();
+        System.out.println("Index: "+ unique.firstUniqChar(str));
     }
 }
