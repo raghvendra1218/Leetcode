@@ -1,4 +1,7 @@
 package com.raghvendra;
+/*
+    Finding Prime numbers - Sieve of Eratosthenes
+ */
 
 public class CountPrimes {
     public int countPrimes(int n) {
