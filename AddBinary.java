@@ -10,6 +10,10 @@ public class AddBinary {
         int j = strB.length-1;
         while(i>=0 || j>=0 || carry == 1){
             carry += i >=0 ? strA[i--] -'0': 0;
+            carry += j >=0 ? strB[j--] -'0': 0;
+            carry /= 2;
+        }
+
 //            if(i >=0){
 //                carry = carry + strA[i] -'0';
 //                System.out.println("carry : "+ carry);
@@ -17,7 +21,7 @@ public class AddBinary {
 //            } else {
 //                carry = carry + 0;
 //            }
-            carry += j >=0 ? strB[j--] -'0': 0;
+
 //            if(j >=0){
 //                carry = carry + strB[j] -'0';
 //                System.out.println("carry : "+ carry);
@@ -25,11 +29,6 @@ public class AddBinary {
 //            } else {
 //                carry = 0;
 //            }
-            System.out.println(carry);
-            System.out.println(sb.append((carry % 2)));
-            carry /= 2;
-            System.out.println(carry);
-        }
 //        int temp = 0;
 //        StringBuilder sb = new StringBuilder("");
 //        boolean carry = false;

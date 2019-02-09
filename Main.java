@@ -152,8 +152,21 @@ public class Main {
 //        CountPrimes countPrimes = new CountPrimes();
 //        System.out.println("Number of Primes: "+ countPrimes.countPrimes(10));
         //First Unique Character in a String
-        String str = "loveleetcode";
-        FirstUniqueCharacterInString unique = new FirstUniqueCharacterInString();
-        System.out.println("Index: "+ unique.firstUniqChar(str));
+//        String str = "loveleetcode";
+//        FirstUniqueCharacterInString unique = new FirstUniqueCharacterInString();
+//        System.out.println("Index: "+ unique.firstUniqChar(str));
+//        //Contains Duplicate
+//        int[] nums = {1,1,1,3,3,4,3,2,4,2};
+//        ContainsDuplicate cd = new ContainsDuplicate();
+//        System.out.println("Output : "+ cd.containsDuplicate(nums));
+        //Contains Duplicate II
+//        int[] nums = {1,2,3,1,2,3};
+//        ContainsDuplicateII cd = new ContainsDuplicateII();
+//        System.out.println("Output : "+ cd.containsNearbyDuplicate(nums,1));
+        //Reverse Only Letters
+//        String str = "Test1ng-Leet=code-Q!";
+        String str = "7_28]";
+        ReverseOnlyLetters rev = new ReverseOnlyLetters();
+        System.out.println("Reversed String: "+rev.reverseOnlyLetters(str));
     }
 }
