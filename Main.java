@@ -165,8 +165,20 @@ public class Main {
 //        System.out.println("Output : "+ cd.containsNearbyDuplicate(nums,1));
         //Reverse Only Letters
 //        String str = "Test1ng-Leet=code-Q!";
-        String str = "7_28]";
-        ReverseOnlyLetters rev = new ReverseOnlyLetters();
-        System.out.println("Reversed String: "+rev.reverseOnlyLetters(str));
+//        String str = "7_28]";
+//        ReverseOnlyLetters rev = new ReverseOnlyLetters();
+//        System.out.println("Reversed String: "+rev.reverseOnlyLetters(str));
+        //Implement strStr()
+//        String hayStack = "mississippi";
+//        String needle = "issipi";
+//        ImplementstrStr isr = new ImplementstrStr();
+//        System.out.println("Output: "+ isr.strStr(hayStack,needle));
+        //Square root of X
+//        SqrtX sq = new SqrtX();
+//        System.out.println("Square root of number: "+ sq.mySqrt(10));
+        //Reverse Words in a String III
+        String s = "Let's take LeetCode contest";
+        ReverseWordsInAStringIII revIII = new ReverseWordsInAStringIII();
+        System.out.println("Reversed String: "+ revIII.reverseWords(s));
     }
 }
