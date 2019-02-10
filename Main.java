@@ -177,8 +177,12 @@ public class Main {
 //        SqrtX sq = new SqrtX();
 //        System.out.println("Square root of number: "+ sq.mySqrt(10));
         //Reverse Words in a String III
-        String s = "Let's take LeetCode contest";
-        ReverseWordsInAStringIII revIII = new ReverseWordsInAStringIII();
-        System.out.println("Reversed String: "+ revIII.reverseWords(s));
+//        String s = "Let's take LeetCode contest";
+//        ReverseWordsInAStringIII revIII = new ReverseWordsInAStringIII();
+//        System.out.println("Reversed String: "+ revIII.reverseWords(s));
+        //Jewels and Stones
+//        String S = "aAAbbbb", J = "aA";
+//        JewelsAndStones js = new JewelsAndStones();
+//        System.out.println("Output count: "+ js.numJewelsInStones(J,S));
     }
 }
