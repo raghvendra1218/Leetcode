@@ -184,5 +184,23 @@ public class Main {
 //        String S = "aAAbbbb", J = "aA";
 //        JewelsAndStones js = new JewelsAndStones();
 //        System.out.println("Output count: "+ js.numJewelsInStones(J,S));
-    }
+        //Longest Palindromic Substring
+//        String input = "abacabssssssss";
+//        LongestPalindromicSubstring lps = new LongestPalindromicSubstring();
+//        System.out.println("Longest Palindromic Substring: "+ lps.longestPalindrome(input));
+        //Climbing Stairs
+//        ClimbingStairs cs = new ClimbingStairs();
+//        System.out.println("Number of Stairs: "+ cs.climbStairs(0));
+        //Fibonacci Number
+//        FibonacciNumber fib = new FibonacciNumber();
+//        System.out.println("Output: "+ fib.fib(4));
+        //Longest Palindrome
+//        String s = "abbccdddeeeb";
+//        LongestPalindrome lp = new LongestPalindrome();
+//        System.out.println("Longest Palindrome length: "+ lp.longestPalindrome(s));
+        //Palindrome Permutation
+        String s = "carerac";
+        PalindromePermutation pp = new PalindromePermutation();
+        System.out.println("Is Palindrome: "+ pp.canPermutePalindrome(s));
+     }
 }

@@ -25,7 +25,7 @@ public class JewelsAndStones {
             letters[(int)S.charAt(i)]++;
         }
         for(int j = 0; j <J.length();j++){
-            count+=letters[J.charAt(j)];
+            count+=letters[(int)J.charAt(j)];
         }
         return count;
     }
