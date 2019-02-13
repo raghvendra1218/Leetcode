@@ -199,8 +199,23 @@ public class Main {
 //        LongestPalindrome lp = new LongestPalindrome();
 //        System.out.println("Longest Palindrome length: "+ lp.longestPalindrome(s));
         //Palindrome Permutation
-        String s = "carerac";
-        PalindromePermutation pp = new PalindromePermutation();
-        System.out.println("Is Palindrome: "+ pp.canPermutePalindrome(s));
+//        String s = "carerac";
+//        PalindromePermutation pp = new PalindromePermutation();
+//        System.out.println("Is Palindrome: "+ pp.canPermutePalindrome(s));
+        //Best Time to Buy and Sell Stock
+//        int[] prices =  {1};
+//        BestTimeToBuySellStock btbs = new BestTimeToBuySellStock();
+//        System.out.println("Maximum Profit: "+ btbs.maxProfit(prices));
+        //Sort Array By Parity
+//        int[] A = {3,1,2,4};
+//        SortArrayByParity sabp = new SortArrayByParity();
+//        System.out.println("Resultant Array: "+ Arrays.toString(sabp.sortArrayByParity(A)));
+        //Factorial Trailing Zeroes
+//        FactorialTrailingZeroes ftz = new FactorialTrailingZeroes();
+//        System.out.println("Trailing zeros: "+ ftz.trailingZeroes(100));
+        //Rotate Array
+        int[] nums = {1,2,3,4,5,6};
+        RotateArray ra = new RotateArray();
+        ra.rotate(nums,2);
      }
 }
