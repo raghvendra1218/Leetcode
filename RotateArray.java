@@ -13,10 +13,11 @@ public class RotateArray {
     Second Approach : Reverse entire array, then swap element around the k (within themselves), keeping k as like pivot
      */
     public void rotate(int[] nums, int k) {
+        k = k % nums.length;
         for(int i = 0, j=nums.length-1; i < j; ++i,j--){
             swap(nums,i,j);
         }
-        int pivot = nums.length - k;
+        int pivot = k;
         int firstStart = 0, firstEnd = pivot-1;
         int secondStart = pivot, secondEnd = nums.length-1;
         while(firstStart <= firstEnd){

@@ -1,5 +1,7 @@
 package com.raghvendra;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -203,7 +205,7 @@ public class Main {
 //        PalindromePermutation pp = new PalindromePermutation();
 //        System.out.println("Is Palindrome: "+ pp.canPermutePalindrome(s));
         //Best Time to Buy and Sell Stock
-//        int[] prices =  {1};
+//        int[] prices =  {7,1,5,3,6,4};
 //        BestTimeToBuySellStock btbs = new BestTimeToBuySellStock();
 //        System.out.println("Maximum Profit: "+ btbs.maxProfit(prices));
         //Sort Array By Parity
@@ -214,8 +216,36 @@ public class Main {
 //        FactorialTrailingZeroes ftz = new FactorialTrailingZeroes();
 //        System.out.println("Trailing zeros: "+ ftz.trailingZeroes(100));
         //Rotate Array
-        int[] nums = {1,2,3,4,5,6};
-        RotateArray ra = new RotateArray();
-        ra.rotate(nums,2);
+//        int[] nums = {1,2,3,4,5,6};
+//        RotateArray ra = new RotateArray();
+//        ra.rotate(nums,2);
+//        int []nums = {1,2,3};
+//        Permutations permutations = new Permutations();
+//        System.out.println(permutations.permute(nums));
+        //Find All Numbers Disappeared in an Array
+//        int[] nums = {4,3,2,7,2,2,3,1};
+//        NumbersDisappearedInArray nda = new NumbersDisappearedInArray();
+//        System.out.println("Missing elements: "+ nda.findDisappearedNumbers(nums));
+        //Best Time to Buy and Sell Stock II
+//        int[] prices =  {7,1,5,3,6,4};
+//        BestTimeToBuySellStockII btbs2 = new BestTimeToBuySellStockII();
+//        System.out.println("Maximum Profit: "+ btbs2.maxProfit(prices));
+        //Valid Anagram
+//        String s = "anagram", t = "nagaram";
+//        ValidAnagram va= new ValidAnagram();
+//        System.out.println("Is Anagram: "+ va.isAnagram(s,t));
+        //Rotate String
+//        String A = "abcde", B = "cdeab";
+//        RotateString rs = new RotateString();
+//        System.out.println("Output : "+ rs.rotateString(A,B));
+        //KMP Algo
+//        String text = "abcxabcdabcdabcy", pattern = "abcdabcy";
+//        KMPAlgo kmp = new KMPAlgo();
+//        System.out.println("Output: "+kmp.KMP(text,pattern));
+        // TwoSum
+        int [] nums = {2,7,11,15};
+        TwoSumII twoSumII = new TwoSumII();
+        int[] result = twoSumII.twoSum(nums,9);
+        System.out.println("Resultant array: "+ Arrays.toString(result));
      }
 }
