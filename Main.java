@@ -1,7 +1,5 @@
 package com.raghvendra;
 
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -243,9 +241,17 @@ public class Main {
 //        KMPAlgo kmp = new KMPAlgo();
 //        System.out.println("Output: "+kmp.KMP(text,pattern));
         // TwoSum
-        int [] nums = {2,7,11,15};
-        TwoSumII twoSumII = new TwoSumII();
-        int[] result = twoSumII.twoSum(nums,9);
-        System.out.println("Resultant array: "+ Arrays.toString(result));
+//        int [] nums = {2,7,11,15};
+//        TwoSumII twoSumII = new TwoSumII();
+//        int[] result = twoSumII.twoSum(nums,9);
+//        System.out.println("Resultant array: "+ Arrays.toString(result));
+        //Longest Common Prefix
+//        String[] Input = new String[]{"aa","a"};
+//        LongestCommonPrefix lcp =  new LongestCommonPrefix();
+//        System.out.println("Output: "+ lcp.longestCommonPrefix(Input));
+        //Add Strings
+        String s1 = "99", s2 = "999";
+        AddStrings as = new AddStrings();
+        System.out.println("Result: "+ as.addStrings(s1,s2));
      }
 }

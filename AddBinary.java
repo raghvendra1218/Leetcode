@@ -9,8 +9,21 @@ public class AddBinary {
         int i = strA.length-1;
         int j = strB.length-1;
         while(i>=0 || j>=0 || carry == 1){
-            carry += i >=0 ? strA[i--] -'0': 0;
-            carry += j >=0 ? strB[j--] -'0': 0;
+//            carry += i >=0 ? strA[i--] -'0': 0;
+            if(i >=0){
+                carry = carry + strA[i] - '0';
+                i--;
+            } else {
+                carry+=0;
+            }
+            if(j >=0){
+                carry = carry + strB[j] - '0';
+                j--;
+            } else {
+                carry+=0;
+            }
+//            carry += j >=0 ? strB[j--] -'0': 0;
+            sb.append((carry % 2));
             carry /= 2;
         }
 
