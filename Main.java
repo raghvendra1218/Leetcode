@@ -250,8 +250,12 @@ public class Main {
 //        LongestCommonPrefix lcp =  new LongestCommonPrefix();
 //        System.out.println("Output: "+ lcp.longestCommonPrefix(Input));
         //Add Strings
-        String s1 = "99", s2 = "999";
-        AddStrings as = new AddStrings();
-        System.out.println("Result: "+ as.addStrings(s1,s2));
+//        String s1 = "99", s2 = "999";
+//        AddStrings as = new AddStrings();
+//        System.out.println("Result: "+ as.addStrings(s1,s2));
+        //Majority Element
+        int[] nums = new int[]{3,2,3};
+        MajorityElement me = new MajorityElement();
+        System.out.println("Output: "+ me.majorityElement(nums));
      }
 }
