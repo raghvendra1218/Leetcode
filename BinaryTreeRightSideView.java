@@ -5,16 +5,16 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class BinaryTreeRightSideView {
-    private class TreeNode {
+    private class Treenode {
         int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x){
+        Treenode left;
+        Treenode right;
+        Treenode(int x){
             val = x;
         }
     }
 
-    public List<Integer> rightSideView(TreeNode root) {
+    public List<Integer> rightSideView(Treenode root) {
         List<Integer> result = new ArrayList<>();
         List<Integer> nodevalues = new ArrayList<>();
 
@@ -22,8 +22,8 @@ public class BinaryTreeRightSideView {
         if(root == null) return result;
 
         //Create two Linked Lists to keep the current level and next level elements in the tree
-        LinkedList<TreeNode> current = new LinkedList<>();
-        LinkedList<TreeNode> next = new LinkedList<>();
+        LinkedList<Treenode> current = new LinkedList<>();
+        LinkedList<Treenode> next = new LinkedList<>();
 
         //Store the root value in the current list to initialise the process
         current.add(root);
@@ -31,7 +31,7 @@ public class BinaryTreeRightSideView {
         //Loop through the tree until current list is empty
         while(!current.isEmpty()){
             //Storing the value from the current list in a temporary variable of Treenode type
-            TreeNode node = current.remove();
+            Treenode node = current.remove();
             //Check if the node have left or right child
             if(node.left != null){
                 next.add(node.left);

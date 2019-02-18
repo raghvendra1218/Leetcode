@@ -68,5 +68,4 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         }
         return result;
     }
-
 }
