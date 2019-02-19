@@ -43,8 +43,7 @@ public class BinaryTreeLevelOrderTraversalII {
               nodeValues = new ArrayList<>();
             }
         }
-        System.out.println(storage);
-//        while(storage.size() > 0 && storage.isEmpty()) result.add(storage.pop());
+//        while(!storage.isEmpty()) result.add(storage.pop()); // Time Complexity increases
         int  i = storage.size()-1;
         for(;i>=0;--i){
             result.add(storage.get(i));
