@@ -13,6 +13,7 @@ public class KthSmallestElementInBST {
     }
 
     /*
+    Inefficient, Unnecessary storing the value in the result ArrayList wastage of both memory and time
     Approach 1: Leveraging BST inOrder traversal and retriving the kth element from the result Array
      */
 
