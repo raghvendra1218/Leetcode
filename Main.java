@@ -254,8 +254,20 @@ public class Main {
 //        AddStrings as = new AddStrings();
 //        System.out.println("Result: "+ as.addStrings(s1,s2));
         //Majority Element
-        int[] nums = new int[]{3,2,3};
-        MajorityElement me = new MajorityElement();
-        System.out.println("Output: "+ me.majorityElement(nums));
+//        int[] nums = new int[]{3,2,3};
+//        MajorityElement me = new MajorityElement();
+//        System.out.println("Output: "+ me.majorityElement(nums));
+        //URLifyString
+//        String str = "Mr John Smith";
+//        URLifyString st = new URLifyString();
+//        st.replaceSpaces(str,13);
+        //Product of Array Except Self
+//        int[] nums = {1,2,3,4};
+//        ProductOfArrayExceptSelf pae = new ProductOfArrayExceptSelf();
+//        System.out.println("Resultant Array: "+ Arrays.toString(pae.productExceptSelf(nums)));
+        //Top K Frequent elements
+        int[] nums = {4,1,-1,2,-1,2,3};
+        TopKFrequentElements tfke = new TopKFrequentElements();
+        System.out.println("List: "+ tfke.topKFrequent(nums,2));
      }
 }
