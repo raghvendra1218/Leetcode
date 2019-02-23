@@ -266,8 +266,12 @@ public class Main {
 //        ProductOfArrayExceptSelf pae = new ProductOfArrayExceptSelf();
 //        System.out.println("Resultant Array: "+ Arrays.toString(pae.productExceptSelf(nums)));
         //Top K Frequent elements
-        int[] nums = {4,1,-1,2,-1,2,3};
-        TopKFrequentElements tfke = new TopKFrequentElements();
-        System.out.println("List: "+ tfke.topKFrequent(nums,2));
+//        int[] nums = {4,1,1,-1,2,-1,2,6,6,6,6,7,7,7,7,2};
+//        TopKFrequentElements tfke = new TopKFrequentElements();
+//        System.out.println("List: "+ tfke.topKFrequent(nums,2));
+        //Kth Largest Element in an Array
+        int[] nums = {3,2,1,1,5,6,4};
+        KthLargestElementInArray le = new KthLargestElementInArray();
+        System.out.println("Output: "+ le.findKthLargest(nums,2));
      }
 }
