@@ -270,8 +270,17 @@ public class Main {
 //        TopKFrequentElements tfke = new TopKFrequentElements();
 //        System.out.println("List: "+ tfke.topKFrequent(nums,2));
         //Kth Largest Element in an Array
-        int[] nums = {3,2,1,1,5,6,4};
-        KthLargestElementInArray le = new KthLargestElementInArray();
-        System.out.println("Output: "+ le.findKthLargest(nums,2));
+//        int[] nums = {3,2,1,1,5,6,4};
+//        KthLargestElementInArray le = new KthLargestElementInArray();
+//        System.out.println("Output: "+ le.findKthLargest(nums,2));
+        //Sort Characters By Frequency
+//        String s= "txxxxxxxxrrDdeeeeE";
+//        SortCharactersByFrequency scf = new SortCharactersByFrequency();
+//        System.out.println("Output: "+ scf.frequencySort(s));
+        //Top K Frequent Words
+        String [] words = {"i", "love", "leetcode", "i", "love", "coding"};
+        TopKFrequentWords tfw = new TopKFrequentWords();
+        System.out.println("Output: "+ tfw.topKFrequent(words,2));
+
      }
 }

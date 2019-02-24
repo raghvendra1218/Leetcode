@@ -3,7 +3,7 @@ package com.raghvendra;
 import java.util.*;
 
 public class TopKFrequentElements {
-    /*
+    /**
     Approach 1: Using HashMap and then sorting the HashMap values
      */
 //    public List<Integer> topKFrequent(int[] nums, int k) {
@@ -30,7 +30,7 @@ public class TopKFrequentElements {
 //        }
 //        return result;
 //    }
-    /*
+    /**
     Approach 2: Using HashMap and Priority Queue
      */
 
