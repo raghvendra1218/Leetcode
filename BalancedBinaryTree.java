@@ -11,9 +11,17 @@ public class BalancedBinaryTree {
     }
 
     public boolean isBalanced(TreeNode root) {
+        int height = 0;
+        height = depth(root);
+        System.out.println(height);
+        if(height > 1) return false;
+        return true;
+    }
 
-
-
-        return false;
+    private int depth(TreeNode root){
+        if(root == null) return 0;
+            int leftHeight = depth(root.left);
+            int rightHeight = depth(root.right);
+        return Math.abs(leftHeight - rightHeight);
     }
 }
