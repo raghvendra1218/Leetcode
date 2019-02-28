@@ -3,12 +3,9 @@ package com.raghvendra;
 public class BestTimeToBuySellStockII {
     public int maxProfit(int[] prices) {
         int profit = 0;
-        int minPrice = Integer.MAX_VALUE;
-        for(int i = 0; i < prices.length; ++i){
-            if(prices[i] < minPrice){
-                minPrice = prices[i];
-            } else if(prices[i] - minPrice > profit){
-                profit = prices[i] - minPrice;
+        for(int i = 1; i < prices.length; ++i){
+            if(prices[i-1] < prices[i]){
+                profit += prices[i] -prices[i-1];
             }
         }
         return profit;
