@@ -225,9 +225,9 @@ public class Main {
 //        NumbersDisappearedInArray nda = new NumbersDisappearedInArray();
 //        System.out.println("Missing elements: "+ nda.findDisappearedNumbers(nums));
         //Best Time to Buy and Sell Stock II
-        int[] prices =  {7,6,4,3,1};
-        BestTimeToBuySellStockII btbs2 = new BestTimeToBuySellStockII();
-        System.out.println("Maximum Profit: "+ btbs2.maxProfit(prices));
+//        int[] prices =  {7,6,4,3,1};
+//        BestTimeToBuySellStockII btbs2 = new BestTimeToBuySellStockII();
+//        System.out.println("Maximum Profit: "+ btbs2.maxProfit(prices));
         //Valid Anagram
 //        String s = "anagram", t = "nagaram";
 //        ValidAnagram va= new ValidAnagram();
@@ -292,6 +292,15 @@ public class Main {
 //        int[] nums2 = {17,17,87,98,18,53,2,69,74,73,20,85,59,89,84,91,84,34,44,48,20,42,68,84,8,54,66,62,69,52,67,27,87,49,92,14,92,53,22,90,60,14,8,71,0,61,94,1,22,84,10,55,55,60,98,76,27,35,84,28,4,2,9,44,86,12,17,89,35,68,17,41,21,65,59,86,42,53,0,33,80,20};
 //        IntersectionOfTwoArraysII is = new IntersectionOfTwoArraysII();
 //        System.out.println("Output: "+ Arrays.toString(is.intersect(nums1,nums2)));
-        //
+        //Most Common Word
+//        String paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.";
+//        String[] banned = new String[]{"hit"};
+//        MostCommonWord mcw = new MostCommonWord();
+//        System.out.println("Output: "+ mcw.mostCommonWord(paragraph, banned));
+        //Reverse Words in a String II
+        char[] str = new char[]{'t','h','e',' ','s','k','y',' ','i','s',' ','b','l','u','e'};
+        ReverseWordsInAStringII res2 = new ReverseWordsInAStringII();
+        res2.reverseWords(str);
+
      }
 }

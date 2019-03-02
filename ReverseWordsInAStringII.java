@@ -1,25 +1,33 @@
 package com.raghvendra;
 
+/**
+ * Input:  ["t","h","e"," ","s","k","y"," ","i","s"," ","b","l","u","e"]
+ * Output: ["b","l","u","e"," ","i","s"," ","s","k","y"," ","t","h","e"]
+ * Follow up: Could you do it in-place without allocating extra space?
+ */
+
 public class ReverseWordsInAStringII {
     public void reverseWords(char[] str) {
-        int stringLength = str.length;
-        int initialIndex = 0;
-        int finalIndex = 0;
-        int counter = 0;
-        while(counter < stringLength){
-            if(str[counter] == ' '){
-                finalIndex = counter;
-//                migrateChunk(initialIndex, finalIndex, str);
-                initialIndex = finalIndex;
+        int startIndex = 0, endIndex = str.length-1;
+        str = reverse(str,startIndex,endIndex);
+        for(int i = 0; i < str.length; ++i){
+            if(str[i] == ' '){
+                endIndex = i-1;
+                str = reverse(str, startIndex, endIndex);
+                startIndex = i+1;
             }
         }
+        str = reverse(str, startIndex, str.length-1);
     }
 
-    public void reverseString(int initialIndex, int finalIndex, char[]str){
-        int slidingwindow = 0;
-        slidingwindow += finalIndex - initialIndex;
-        for(int i = str.length-slidingwindow; i>0; i-- ){
-
+    private char[] reverse(char[] str, int startIndex, int endIndex){
+        while(startIndex < endIndex){
+            char temp = str[startIndex];
+            str[startIndex] = str[endIndex];
+            str[endIndex] = temp;
+            startIndex++;
+            endIndex--;
         }
+        return str;
     }
 }
