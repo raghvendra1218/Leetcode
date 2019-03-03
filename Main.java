@@ -298,9 +298,12 @@ public class Main {
 //        MostCommonWord mcw = new MostCommonWord();
 //        System.out.println("Output: "+ mcw.mostCommonWord(paragraph, banned));
         //Reverse Words in a String II
-        char[] str = new char[]{'t','h','e',' ','s','k','y',' ','i','s',' ','b','l','u','e'};
-        ReverseWordsInAStringII res2 = new ReverseWordsInAStringII();
-        res2.reverseWords(str);
-
+//        char[] str = new char[]{'t','h','e',' ','s','k','y',' ','i','s',' ','b','l','u','e'};
+//        ReverseWordsInAStringII res2 = new ReverseWordsInAStringII();
+//        res2.reverseWords(str);
+        //Group Anagrams
+        String [] strs = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
+        GroupAnagrams ga = new GroupAnagrams();
+        System.out.println("Output: "+ ga.groupAnagrams(strs));
      }
 }
