@@ -26,6 +26,8 @@ public class MeetingRoomsII {
         heap.add(intervals[0].end);
 
         //iterate over the remaining meeting time slots and check if the room is free or not
+        //poll the item from the heap if the room is available and add new slot(end time) in heap, else just add new time in the heap
+        //number of elements in the heap will give you the minimum number of rooms
         for(int i =1; i< intervals.length; ++i){
             if(heap.peek() < intervals[i].start){
                 heap.poll();
