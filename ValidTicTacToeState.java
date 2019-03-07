@@ -78,9 +78,9 @@ public class ValidTicTacToeState {
         boolean turnsInvalid = xWins && turns == 0 || oWins && turns == 1;
         if(turnsInvalid) return false;
 
-        boolean findFinalturnCount = turns ==1 || turns == 0;
+        boolean findFinalTurnCount = turns ==1 || turns == 0;
         boolean onlyOnePartyWins = !xWins || !oWins;
 
-        return findFinalturnCount && onlyOnePartyWins;
+        return findFinalTurnCount && onlyOnePartyWins;
     }
 }
