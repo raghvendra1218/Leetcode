@@ -3,7 +3,7 @@ package com.raghvendra;
 public class ValidTicTacToeState {
     public boolean validTicTacToe(String[] board) {
         int length = board.length;
-        //We ccnnot use below commented line for calculating the lastIndex of column because String can be empty in that case
+        //We cannot use below commented line for calculating the lastIndex of column because String can be empty in that case
         //board[0].length will be 0;
 //        int lastIndex = board[0].length() -1;
         int lastIndex = length -1;  //safe to use rather than above
