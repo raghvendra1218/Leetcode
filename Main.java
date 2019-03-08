@@ -302,8 +302,11 @@ public class Main {
 //        ReverseWordsInAStringII res2 = new ReverseWordsInAStringII();
 //        res2.reverseWords(str);
         //Group Anagrams
-        String [] strs = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
-        GroupAnagrams ga = new GroupAnagrams();
-        System.out.println("Output: "+ ga.groupAnagrams(strs));
+//        String [] strs = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
+//        GroupAnagrams ga = new GroupAnagrams();
+//        System.out.println("Output: "+ ga.groupAnagrams(strs));
+        //String Permutations
+        StringPermutations sp =  new StringPermutations();
+        System.out.println("Output: "+ sp.permutations("ABC"));
      }
 }

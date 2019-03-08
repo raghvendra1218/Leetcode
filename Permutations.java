@@ -1,31 +1,35 @@
 package com.raghvendra;
 
-import java.util.*;
-import java.util.stream.Collectors;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Permutations {
-    List<List<Integer>> result;
     public List<List<Integer>> permute(int[] nums) {
-        result = new ArrayList<>();
-        List<Integer> list = new ArrayList<>();
-        List<Integer> numAsArray = Arrays.stream(nums)
-                .boxed()
-                .collect(Collectors.toList());
-        Set<Integer> set = new HashSet<>(numAsArray);
-        recursion(set, list);
+        List<List<Integer>> result = new ArrayList<>();
+        permutations(nums, 0, result);
         return result;
     }
-    public void recursion (Set<Integer> set, List<Integer> num){
-        if(set.isEmpty()){
-            result.add(num);
-            return;
+
+    private void permutations(int[] nums, int start, List<List<Integer>> result){
+        if (start >= nums.length){
+            List<Integer> temp = new ArrayList<>();
+            for(int i : nums){
+                temp.add(i);
+            }
+            result.add(temp);
         }
-        for(int n: set){
-            num.add(n);
-            List<Integer> newList = new ArrayList<>(num);
-            Set<Integer> newSet = new HashSet<>(set);
-            newSet.remove(n);
-            recursion(newSet, newList);
+
+        for(int i = start; i <nums.length; ++i){
+            swap(nums, start, i);
+            permutations(nums, start + 1 , result);
+            swap(nums, start,i);
         }
+    }
+
+    private void swap(int[] nums, int a, int b){
+        int temp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = temp;
     }
 }
