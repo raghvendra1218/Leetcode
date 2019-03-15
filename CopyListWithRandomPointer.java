@@ -16,15 +16,20 @@ public class CopyListWithRandomPointer {
     public Node copyRandomList(Node head) {
         if(head == null) return null;
         Node curr = head;
-        Node newHead = new Node(curr.val, null, null);
-        Node newCurr = newHead;
-//        Node newRand = null;
+        Node newHead = null;
+        Node newCurr = null;
+
         //creating a new Linked List with rand pointer as null
         while(curr != null){
-            curr = curr.next;
             Node newNode = new Node(curr.val, null, null);
-            newCurr.next = newNode;
-            newCurr = newNode;
+            if(newHead == null){
+                newHead = newNode;
+                newCurr = newHead;
+            } else {
+                newCurr.next = newNode;
+                newCurr = newCurr.next;
+            }
+            curr = curr.next;
         }
 
         //initialising the curr back to head
@@ -42,9 +47,10 @@ public class CopyListWithRandomPointer {
 
         curr = head;
         newCurr = head;
+
         //Now connect the random pointers to respective nodes
         while(curr != null){
-            newCurr.random = curr.random.random.next;
+            newCurr.random = newCurr.random.random.next;
             curr = curr.next;
             newCurr = newCurr.next;
         }
