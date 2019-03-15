@@ -19,7 +19,7 @@ public class CopyListWithRandomPointer {
         Node newHead = null;
         Node newCurr = null;
 
-        //creating a new Linked List with rand pointer as null
+        //Step 1: creating a new Linked List with rand pointer as null
         while(curr != null){
             Node newNode = new Node(curr.val, null, null);
             if(newHead == null){
@@ -32,12 +32,23 @@ public class CopyListWithRandomPointer {
             curr = curr.next;
         }
 
+        //initialising the curr and NewCurr back to respective heads
+        curr = head;
+        newCurr = newHead;
+
+        //Step 2: Point the random pointer of cloned link list to the original link list
+        while(newCurr != null){
+            newCurr.random = curr;
+            newCurr = newCurr.next;
+            curr = curr.next;
+        }
+
         //initialising the curr back to head
         curr = head;
         Node prevCurr = head;
         newCurr = newHead;
 
-        //Pointing the next pointer of original linked list to the newly created list
+        //Step 3: Pointing the next pointer of original linked list to the newly created list
         while(curr != null){
             curr = curr.next;
             prevCurr.next = newCurr;
@@ -45,13 +56,14 @@ public class CopyListWithRandomPointer {
             newCurr = newCurr.next;
         }
 
+        //initialising the curr and NewCurr back to respective heads
         curr = head;
-        newCurr = head;
+        newCurr = newHead;
 
-        //Now connect the random pointers to respective nodes
-        while(curr != null){
+        //Step 4: Connect the random pointers to respective nodes
+        while(newCurr != null){
             newCurr.random = newCurr.random.random.next;
-            curr = curr.next;
+//            curr = curr.next;
             newCurr = newCurr.next;
         }
         return newHead;
