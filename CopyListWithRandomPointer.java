@@ -13,21 +13,41 @@ public class CopyListWithRandomPointer {
         }
     }
 
-//    public Node copyRandomList(Node head) {
-//        if(head == null) return null;
-//        Node oldListPointer =  head;
-//        Node newListHead = new Node();
-//        newListHead.val = head.val;
-//        Node currentListPointer = newListHead;
-//        Node previousListPointer = newListHead;
-//        while(oldListPointer != null){
-//            oldListPointer = oldListPointer.next;
-//            Node temp = new Node();
-//            temp.val = oldListPointer.val;
-//            currentListPointer.next = temp;
-//            temp.next =
-//            currentListPointer = currentListPointer.next;
-//        }
-//
-//    }
+    public Node copyRandomList(Node head) {
+        if(head == null) return null;
+        Node curr = head;
+        Node newHead = new Node(curr.val, null, null);
+        Node newCurr = newHead;
+//        Node newRand = null;
+        //creating a new Linked List with rand pointer as null
+        while(curr != null){
+            curr = curr.next;
+            Node newNode = new Node(curr.val, null, null);
+            newCurr.next = newNode;
+            newCurr = newNode;
+        }
+
+        //initialising the curr back to head
+        curr = head;
+        Node prevCurr = head;
+        newCurr = newHead;
+
+        //Pointing the next pointer of original linked list to the newly created list
+        while(curr != null){
+            curr = curr.next;
+            prevCurr.next = newCurr;
+            prevCurr = curr;
+            newCurr = newCurr.next;
+        }
+
+        curr = head;
+        newCurr = head;
+        //Now connect the random pointers to respective nodes
+        while(curr != null){
+            newCurr.random = curr.random.random.next;
+            curr = curr.next;
+            newCurr = newCurr.next;
+        }
+        return newHead;
+    }
 }

@@ -14,7 +14,6 @@ public class SerializeAndDeserializeBinaryTree {
     public String serialize(TreeNode root) {
        StringBuilder serializedTree =  new StringBuilder();
        serializedTree = preOrder(root, serializedTree);
-       System.out.println(serializedTree);
        return new String(serializedTree);
     }
 
@@ -44,7 +43,7 @@ public class SerializeAndDeserializeBinaryTree {
             idx += 1;
             return null;
         }
-        TreeNode root  = new TreeNode(Integer.parseInt(data[idx]));
+        TreeNode root = new TreeNode(Integer.parseInt(data[idx]));
         idx +=1;
         root.left = deserial(data);
         root.right = deserial(data);
