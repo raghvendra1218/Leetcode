@@ -20,7 +20,7 @@ public class NumberOfIslands {
         int lastRow = grid.length - 1;
         int lastCol = grid[0].length - 1;
 
-        //
+        //Base case (or the input case where we have to return or break from recursion below)
         if(row < 0 || col < 0 || row > lastRow || col > lastCol || grid[row][col] == '0'){
             return;
         }
