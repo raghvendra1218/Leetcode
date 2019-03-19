@@ -9,7 +9,7 @@ public class SetMatrixZeroes {
      * Space Complexity : O(m *n)
      */
     /**
-     * Approach 2: instead of taking entire Auxilary matrix of m * n space we can take two Arrays of size m and n
+     * Approach 2: instead of taking entire Auxiliary matrix of m * n space we can take two Arrays of size m and n
      * each element in the array denotes corresponding rows and cols becoz we are interested in knowing which row and which col have zero
      * elements becoz entire row and col will be made to zero, hence we will save some space here
      * Space Complexity : O(m + n)
