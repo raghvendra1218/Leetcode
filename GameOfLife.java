@@ -31,19 +31,19 @@ public class GameOfLife {
 
     private int count(int row, int col, int [][] board){
         //Edges
-        int  startRow = 0;
-        int startCol = 0;
-        int endRow = 1, endCol = 1;
-        if(row != 0 ){
-            startRow = -1;
+        int  startRow = -1;
+        int startCol = -1;
+        int endRow = 2, endCol = 2;
+        if(row == 0 ){
+            startRow = 0;
         }
-        if (col != 0){
-            startCol = -1;
+        if (col == 0){
+            startCol = 0;
         }
-        if(row != board.length - 1){
+        if(row == board.length - 1){
             endRow = 1;
         }
-        if(col != board[0].length - 1){
+        if(col == board[0].length - 1){
             endCol = 1;
         }
         int sum = 0;

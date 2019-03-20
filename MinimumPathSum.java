@@ -49,8 +49,8 @@ public class MinimumPathSum {
         // One, when the either row reaches at the end of the row, then we will simply return the Integer.Max_VALUE, because we have to find the minimum path sum
         // Second, when the either row reaches at the end of the col, then we will simply return the Integer.Max_VALUE, because we have to find the minimum path sum
         // Third, when row and col reaches at the last element of the matrix i.e grid[m][n], where we will return value at that point
-        //We will create another matrix of same size as given matrix fill it with -1 (becoz original matrix contains non -negative number)
-        //now fill the values of memo with recursion if not present if present return the memo[row][col].
+        // We will create another matrix of same size as given matrix fill it with -1 (becoz original matrix contains non -negative number)
+        // now fill the values of memo with recursion if not present if present return the memo[row][col].
         if(row == grid.length || col == grid[0].length) {
             return Integer.MAX_VALUE;
         }
