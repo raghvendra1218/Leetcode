@@ -32,7 +32,7 @@ public class JumpGameII {
     }*/
 
     /**
-     * Using Dynamic Programming
+     * Using Dynamic Programming : Time limit exceeds
      * @param nums
      * @return
      */
@@ -57,6 +57,15 @@ public class JumpGameII {
                     }
                 }
             }
+        }
+        //To print out the path or Index which were taken to travel
+        System.out.print("Path: " + (jumpIndex.length - 1) + " ,");
+        for(int i = 0; i < jumpIndex.length; ++i){
+            System.out.print(jumpIndex[i]);
+        }
+        for(int i = jumpIndex.length - 1; i >=0; --i){
+            System.out.print(jumpIndex[i]+" ,");
+            i = jumpIndex[i];
         }
         return numJumps[numJumps.length - 1];
     }
