@@ -5,31 +5,30 @@ import java.util.Map;
 
 public class RomanToInteger {
     public int romanToInt(String s) {
-        int num = Integer.parseInt(s);
-        if (num > 3999 || num < 1) return -1;
-        StringBuilder result = new StringBuilder();
-        Map<String, Integer> roman = new HashMap<>();
-        roman.put("I", 1);
-        roman.put("V", 5);
-        roman.put("X", 10);
-        roman.put("L", 50);
-        roman.put("C", 100);
-        roman.put("D", 500);
-        roman.put("M", 1000);
-        roman.put("CM", 900);
-        roman.put("CD", 400);
-        roman.put("XC", 90);
-        roman.put("XL", 40);
-        roman.put("IX", 9);
-        roman.put("IV", 4);
+        //Boundary condition check
+        int result  = 0;
+        if(s == null || s.length() == 0) return result;
 
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
 
         int len = s.length();
-        int i = 0;
-        while (num > 0) {
+        //store the unit's place in the result
+        result = map.get(s.charAt(len - 1));
 
-
+        for(int i = len - 2; i >= 0; i--){
+            if(map.get(s.charAt(i)) >= map.get(s.charAt(i + 1))) {
+                result += map.get(s.charAt(i));
+            } else {
+                result -= map.get(s.charAt(i));
+            }
         }
-        return -1;
+        return result;
     }
 }

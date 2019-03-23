@@ -3,12 +3,12 @@ package com.raghvendra;
 public class URLifyString {
     public void replaceSpaces(String st, int trueLength){
         char[] str = st.toCharArray();
-        int spaceCount = 0, index =0 ;
+        int spaceCount = 0, index = 0 ;
         for(int i = 0; i < trueLength; ++i){
             if(str[i] == ' ') spaceCount++;
         }
 
-        index = trueLength + spaceCount*2;
+        index = trueLength + spaceCount * 2;
 //        str = new char[17];
         for(int i = trueLength - 1; i >=0; --i){
             if(str[i] == ' '){
