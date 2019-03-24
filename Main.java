@@ -306,7 +306,11 @@ public class Main {
 //        GroupAnagrams ga = new GroupAnagrams();
 //        System.out.println("Output: "+ ga.groupAnagrams(strs));
         //String Permutations
-        StringPermutations sp =  new StringPermutations();
-        System.out.println("Output: "+ sp.permutations("ABC"));
+//        StringPermutations sp =  new StringPermutations();
+//        System.out.println("Output: "+ sp.permutations("ABC"));
+        //Remove Comments
+        String[] source =  new String[]{"/*Test program */", "int main()", "{ ", "  // variable declaration ", "int a, b, c;", "/* This is a test", "   multiline  ", "   comment for ", "   testing */", "a = b + c;",};
+        RemoveComments removeComments = new RemoveComments();
+        System.out.println("Output: " + removeComments.removeComments(source));
      }
 }
