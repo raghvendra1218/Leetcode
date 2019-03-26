@@ -21,7 +21,7 @@ public class LRUCache {
         int value;
         Node next;
         Node prev;
-        Node(){};
+        Node(){}
         Node(int key, int value){
             this.key = key;
             this.value = value;
@@ -99,10 +99,10 @@ public class LRUCache {
      */
     private void removeNode(Node node){
         Node prev = node.prev;
-        Node next = node.next;
+        Node next = node.next;  //When called by popTail function : next will be tail here.
 
-        prev.next = next;  //next will be tail here
-        next.prev = prev;  //next.prev is equivalent to tail.prev here
+        prev.next = next;
+        next.prev = prev;       //When called by popTail function : next.prev is equivalent to tail.prev here
     }
 
     /**
