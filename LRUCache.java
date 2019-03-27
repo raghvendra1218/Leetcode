@@ -64,18 +64,19 @@ public class LRUCache {
     public void put(int key, int value) {
         Node node = myMap.get(key);
         if(node == null){
-            Node newNode = new Node(key, value);
-            this.myMap.put(key, newNode);
-            this.addNode(newNode);
-            size++;
-
-            //check if the size is greater than capacity
-            if(size > capacity){
+            //check if the size is equal to capacity
+            if(size == capacity){
                 //pop the tail
                 Node tail = this.popTail();
                 this.myMap.remove(tail.key);
                 size--;
             }
+
+            Node newNode = new Node(key, value);
+            this.myMap.put(key, newNode);
+            this.addNode(newNode);
+            size++;
+
         } else {
             //update the already existing key value pair both in list and map, updating the value in node will automatically update node everywhere it is used
             node.value = value;
