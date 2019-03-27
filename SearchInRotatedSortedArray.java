@@ -34,9 +34,9 @@ public class SearchInRotatedSortedArray {
         return result;
     }
 
+    int foundIndex = 0;
     private int findPivot(int start, int end, int[] nums){
         int mid = start + (end - start)/2;
-        int foundIndex = 0;
         //Base case for recursion
         if(nums[mid] > nums[mid + 1]){
             return mid + 1;
