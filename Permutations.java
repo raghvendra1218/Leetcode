@@ -4,7 +4,37 @@ package com.raghvendra;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Approach 1: Not including the element from the list if already exist
+ */
 public class Permutations {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> tempList = new ArrayList<>();
+        backTrack(result, tempList, nums);
+        return result;
+    }
+
+    private void backTrack(List<List<Integer>> result, List<Integer> tempList, int[] nums) {
+        if(tempList.size() == nums.length) {
+            result.add(new ArrayList<>(tempList));
+        }
+
+        for(int i = 0; i < nums.length; ++i){
+            if(tempList.contains(nums[i])) continue;
+            tempList.add(nums[i]);
+            backTrack(result, tempList, nums);
+            tempList.remove(tempList.size() - 1);
+        }
+    }
+}
+
+
+
+/**
+ * Approach 2: Using swap and progressing index on each iteration
+ */
+/*public class Permutations {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         permutations(nums, 0, result);
@@ -32,4 +62,4 @@ public class Permutations {
         nums[a] = nums[b];
         nums[b] = temp;
     }
-}
+}*/
