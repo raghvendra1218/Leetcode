@@ -7,7 +7,7 @@ public class WallsAndGates {
     /**
      * Approach 1 : We can find all the rooms. For each room BFS until the gate with minimum path is found. Time Complexity : O(x * m * n) , x: number of gates.
      * Approach 2: We can find all the gates. For each Gate BFS for all the rooms. Time Complexity : O(m * n).
-     * Approach 3: DFS will not be a good option, always use BFS when w ehave to just find if path exits or not, use DFS when find all possible paths
+     * Approach 3: DFS will not be a good option, always use BFS when we have to just find if path exits or not, use DFS when find all possible paths
      */
 
     //define a class cell which will store the state for each cell in the matrix

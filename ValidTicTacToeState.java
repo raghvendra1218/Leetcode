@@ -6,7 +6,7 @@ public class ValidTicTacToeState {
         //We cannot use below commented line for calculating the lastIndex of column because String can be empty in that case
         //board[0].length will be 0;
 //        int lastIndex = board[0].length() -1;
-        int lastIndex = length -1;  //safe to use rather than above
+        int lastIndex = length - 1;  //safe to use rather than above
 
         int [] rowCounter = new int[length];
         int [] colCounter = new int[length];
@@ -30,7 +30,7 @@ public class ValidTicTacToeState {
 
                     if(i == j) diagCount++;
                     if(i == lastIndex - j) antiDiagCount++;
-                } else if( c == 'O'){
+                } else if(c == 'O'){
                     turns--;
                     rowCounter[i]--;
                     colCounter[j]--;
@@ -54,7 +54,7 @@ public class ValidTicTacToeState {
 
         //traverse through each row and check if sum of rowCounter is equal to -length, if yes then set Y wins to true
         boolean oWinsByRows = false;
-        for(int i =0; i<length; ++i){
+        for(int i = 0; i<length; ++i){
             if(rowCounter[i] == -length) oWinsByRows = true;
         }
 

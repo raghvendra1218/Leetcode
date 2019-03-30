@@ -48,6 +48,6 @@ public class UniquePaths {
                 auxliary[row][col] = auxliary[row -1][col] + auxliary[row][col -1];
             }
         }
-        return auxliary[m][n];
+        return auxliary[m-1][n-1];
     }
 }
