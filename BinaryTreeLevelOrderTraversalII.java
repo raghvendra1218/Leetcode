@@ -12,7 +12,7 @@ public class BinaryTreeLevelOrderTraversalII {
         }
     }
 
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+/*    public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> nodeValues = new ArrayList<>();
         Stack<List<Integer>> storage = new Stack<>();
@@ -49,50 +49,29 @@ public class BinaryTreeLevelOrderTraversalII {
             result.add(storage.get(i));
         }
         return result;
-    }
+    }*/
 
-    /*
-    Approach -2 Using Queue - currently not working
+    /**
+    Approach -2 Using one Queue
      */
 
-//    public List<List<Integer>> levelOrderBottom(TreeNode root) {
-//        List<List<Integer>> result = new ArrayList<>();
-//        List<Integer> nodeValues = new ArrayList<>();
-//        Stack<List<Integer>> storage = new Stack<>();
-//
-//        if(root == null) return result;
-//
-//        Queue<TreeNode> queue = new LinkedList<>();
-//
-//        queue.offer(root);
-//        queue.offer(null);
-//
-//        while(!queue.isEmpty()){
-//            root = queue.poll();
-//            if(root != null){
-//                if(root.left != null){
-//                    queue.offer(root.left);
-//                }
-//                if(root.right !=null){
-//                    queue.offer(root.right);
-//                }
-//                nodeValues.add(root.val);
-//            } else {
-//
-//                if (!queue.isEmpty()) {
-//                    queue.poll();
-//                    storage.push(nodeValues);
-//                    nodeValues = new ArrayList<>();
-//                    queue.offer(null);
-//                }
-//            }
-//        }
-//        System.out.println(storage);
-////        while(storage.size() > 0 && storage.isEmpty()) result.add(storage.pop());
-//        int  i = storage.size()-1;
-//        for(;i>=0;--i){
-//            result.add(storage.get(i));
-//        }
-//        return result;
-//    }
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> wrapList = new LinkedList<>();
+
+        if(root == null) return wrapList;
+
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            int levelNum = queue.size();
+            List<Integer> subList = new LinkedList<>();
+            for(int i=0; i<levelNum; i++) {
+                if(queue.peek().left != null) queue.offer(queue.peek().left);
+                if(queue.peek().right != null) queue.offer(queue.peek().right);
+                subList.add(queue.poll().val);
+            }
+            wrapList.add(0, subList);
+        }
+        return wrapList;
+    }
 }
