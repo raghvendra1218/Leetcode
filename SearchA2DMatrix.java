@@ -29,6 +29,7 @@ package com.raghvendra;
 
 public class SearchA2DMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {
+        if(matrix.length == 0) return false;
         int row = 0, lasCol = matrix[0].length - 1;
         while(row < matrix.length -1 && lasCol >= 0){
             if(matrix[row][lasCol] == target) return true;
