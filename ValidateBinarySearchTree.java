@@ -39,7 +39,7 @@ public class ValidateBinarySearchTree {
         //Create a Stack for storing node Values
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
-        double temp = -Double.MAX_VALUE;
+        double temp = - Double.MAX_VALUE;
 
         while (!stack.isEmpty() || node != null) {
             while (node != null) {
