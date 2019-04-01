@@ -1,13 +1,13 @@
 package com.raghvendra;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-
 /*
 Time Complexity : O(n)
 Space Complexity : O(height of the stack), in Worst case height of the stack will be height of the Binary Tree
  */
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
 public class BinaryTreeInorderTraversal {
     private class TreeNode{
@@ -41,7 +41,7 @@ public class BinaryTreeInorderTraversal {
     Approach 2 - Iterative Solution
      */
 
-    public List<Integer> inorderTraversal(TreeNode root) {
+/*    public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result =  new ArrayList<>();
         if(root == null) return result;
 
@@ -63,5 +63,21 @@ public class BinaryTreeInorderTraversal {
             }
         }
         return result;
+    }*/
+
+    public List < Integer > inorderTraversal(TreeNode root) {
+        List< Integer > res = new ArrayList< >();
+        Stack< TreeNode > stack = new Stack < > ();
+        TreeNode curr = root;
+        while (curr != null || !stack.isEmpty()) {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+            curr = stack.pop();
+            res.add(curr.val);
+            curr = curr.right;
+        }
+        return res;
     }
 }
