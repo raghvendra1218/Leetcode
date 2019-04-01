@@ -56,7 +56,7 @@ public class SlidingWindowMaximum {
 
             //pop the elements from the back of the deque if new element is greater than stored elements in the deque, this will ensure
             //the max element at the top of queue
-            while(!deque.isEmpty() && nums[deque.pollLast()] < nums[idx]){
+            while(!deque.isEmpty() && nums[deque.peekLast()] < nums[idx]){
                 deque.pollLast();
             }
 
