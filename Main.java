@@ -313,8 +313,11 @@ public class Main {
 //        RemoveComments removeComments = new RemoveComments();
 //        System.out.println("Output: " + removeComments.removeComments(source));
         //House Robber
-        int[] nums = {2,7,9,3,1};
-        HouseRobber hr = new HouseRobber();
-        System.out.println("Output: " + hr.rob(nums));
+//        int[] nums = {2,7,9,3,1};
+//        HouseRobber hr = new HouseRobber();
+//        System.out.println("Output: " + hr.rob(nums));
+        String IP = "172.16.254.1";
+        ValidateIPAddress validateIPAddress =  new ValidateIPAddress();
+        System.out.println("Output: "+ validateIPAddress.validIPAddress(IP));
      }
 }

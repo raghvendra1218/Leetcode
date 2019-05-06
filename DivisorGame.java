@@ -35,10 +35,10 @@ public class DivisorGame {
      * for other player, then the other player looses, so the strategy is to avoid getting odd number for Alice (if there is an option)
      * In case if Alice is presented with odd Number, then there is definite loosing for Alice.
      */
-    public boolean divisorGame(int N) {
-        if(N%2 != 0) return false;
-        return true;
-    }
+//    public boolean divisorGame(int N) {
+//        if(N%2 != 0) return false;
+//        return true;
+//    }
 
     /** Approach 2: If we are unable to figure out the above pattern odd/even, still we can see that we are calculating for each Number,
      * we somehow get an idea, that D.P. will be used for performance optimization.
@@ -49,10 +49,10 @@ public class DivisorGame {
         dp[0] = false;
         dp[1] = false;
 
-        for(int i = 2; i <=N; ++i){
+        for(int i = 2; i <= N; ++i){
             for(int j = 1; j < i; ++j){
                 if(i % j == 0){
-                    if(dp[i - j] == false){
+                    if(!dp[i - j]){
                         dp[i] = true;
                         break;
                     }
