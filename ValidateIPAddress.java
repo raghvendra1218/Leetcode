@@ -52,6 +52,7 @@ public class ValidateIPAddress {
     }
 
     private boolean validIPv4(String IP){
+        //track the count of number of '.'
         int cnt = 0;
         for(char ch : IP.toCharArray()){
             if(ch == '.'){
@@ -79,6 +80,7 @@ public class ValidateIPAddress {
     }
 
     private boolean validIPv6(String IP){
+        //track the number of ':'
         int cnt = 0;
         for(char ch : IP.toCharArray()){
             if(ch == ':'){
