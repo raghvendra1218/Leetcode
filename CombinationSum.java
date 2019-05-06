@@ -51,7 +51,6 @@ public class CombinationSum {
             result.add(new ArrayList<>(tempList));
         } else {
             for(int i = start; i < candidates.length; ++i){
-                if(i > start && candidates[i] == candidates[i - 1]) continue;
                 tempList.add(candidates[i]);
                 backTrack(result, tempList, i, remain - candidates[i], candidates); // since duplicates are allowed, so no start will not be i + 1 here
                 tempList.remove(tempList.size() - 1);

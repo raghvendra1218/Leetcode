@@ -309,8 +309,12 @@ public class Main {
 //        StringPermutations sp =  new StringPermutations();
 //        System.out.println("Output: "+ sp.permutations("ABC"));
         //Remove Comments
-        String[] source =  new String[]{"/*Test program */", "int main()", "{ ", "  // variable declaration ", "int a, b, c;", "/* This is a test", "   multiline  ", "   comment for ", "   testing */", "a = b + c;",};
-        RemoveComments removeComments = new RemoveComments();
-        System.out.println("Output: " + removeComments.removeComments(source));
+//        String[] source =  new String[]{"/*Test program */", "int main()", "{ ", "  // variable declaration ", "int a, b, c;", "/* This is a test", "   multiline  ", "   comment for ", "   testing */", "a = b + c;",};
+//        RemoveComments removeComments = new RemoveComments();
+//        System.out.println("Output: " + removeComments.removeComments(source));
+        //House Robber
+        int[] nums = {2,7,9,3,1};
+        HouseRobber hr = new HouseRobber();
+        System.out.println("Output: " + hr.rob(nums));
      }
 }
