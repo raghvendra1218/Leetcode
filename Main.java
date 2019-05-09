@@ -316,8 +316,11 @@ public class Main {
 //        int[] nums = {2,7,9,3,1};
 //        HouseRobber hr = new HouseRobber();
 //        System.out.println("Output: " + hr.rob(nums));
-        String IP = "172.16.254.1";
-        ValidateIPAddress validateIPAddress =  new ValidateIPAddress();
-        System.out.println("Output: "+ validateIPAddress.validIPAddress(IP));
+//        String IP = "172.16.254.1";
+//        ValidateIPAddress validateIPAddress =  new ValidateIPAddress();
+//        System.out.println("Output: "+ validateIPAddress.validIPAddress(IP));
+        int[] nums = {1,2,3,1,1,3,5};
+        MaximumProductOfThreeNumbers mp3nums = new MaximumProductOfThreeNumbers();
+        System.out.println("Maximum Product of Three Numbers: "+ mp3nums.maximumProduct(nums));
      }
 }
