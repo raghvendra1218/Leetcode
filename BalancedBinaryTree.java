@@ -42,15 +42,17 @@ public class BalancedBinaryTree {
     }
 
     public boolean isBalanced(TreeNode root) {
-        return depth(root) != null;
+        //Keeping -1 as a measure to check if the tree is balanced or not
+        if(depth(root) != -1) return true;
+        return false;
     }
 
-    private Integer depth(TreeNode root){
+    private int depth(TreeNode root){
         if(root == null) return 0;
-        Integer leftHeight = depth(root.left);
-        Integer rightHeight = depth(root.right);
-        if(leftHeight == null || rightHeight == null) return null;
-        if(Math.abs(leftHeight - rightHeight) > 1) return null;
+        int leftHeight = depth(root.left);
+        int rightHeight = depth(root.right);
+        if(leftHeight == -1 || rightHeight == -1) return -1;
+        if(Math.abs(leftHeight - rightHeight) > 1) return -1;
         return Math.max(leftHeight,rightHeight) + 1;
     }
 }
