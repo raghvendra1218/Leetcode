@@ -1,4 +1,35 @@
 package com.raghvendra;
+/*
+Given a binary tree, determine if it is height-balanced.
+
+For this problem, a height-balanced binary tree is defined as:
+
+a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+
+Example 1:
+
+Given the following tree [3,9,20,null,null,15,7]:
+
+    3
+   / \
+  9  20
+    /  \
+   15   7
+Return true.
+
+Example 2:
+
+Given the following tree [1,2,2,3,3,null,null,4,4]:
+
+       1
+      / \
+     2   2
+    / \
+   3   3
+  / \
+ 4   4
+Return false.
+ */
 
 public class BalancedBinaryTree {
     private class TreeNode {
@@ -11,17 +42,15 @@ public class BalancedBinaryTree {
     }
 
     public boolean isBalanced(TreeNode root) {
-        int height = 0;
-        height = depth(root);
-        System.out.println(height);
-        if(height > 1) return false;
-        return true;
+        return depth(root) != null;
     }
 
-    private int depth(TreeNode root){
+    private Integer depth(TreeNode root){
         if(root == null) return 0;
-            int leftHeight = depth(root.left);
-            int rightHeight = depth(root.right);
-        return Math.abs(leftHeight - rightHeight);
+        Integer leftHeight = depth(root.left);
+        Integer rightHeight = depth(root.right);
+        if(leftHeight == null || rightHeight == null) return null;
+        if(Math.abs(leftHeight - rightHeight) > 1) return null;
+        return Math.max(leftHeight,rightHeight) + 1;
     }
 }
