@@ -37,7 +37,7 @@ public class SymmetricTree {
         }
     }
 
-    public boolean isSymmetric(TreeNode root) {
+/*    public boolean isSymmetric(TreeNode root) {
         //Check the edge cases
         if(root == null) return true;
 
@@ -57,14 +57,14 @@ public class SymmetricTree {
         if(left.val != right.val) return false;
         //check if the left and right node's left subtree are symmetric or not
         return isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
-    }
+    }*/
 
     /**
      * Approach 2: Iterative Solution
      */
     public boolean isSymmetric(TreeNode root) {
         if(root == null) return true;
-        //Store the value in quue, Since tree will be symmetric we just need to check the left and righ nodes are exactly equal,
+        //Store the value in queue, Since tree will be symmetric we just need to check the left and righ nodes are exactly equal,
         //be careful while inserting the left and right child of nodes while traversing
         Queue<TreeNode> myqueue = new LinkedList<>();
         //Add the root twice This is done, because we need child of left and right Noes for root
