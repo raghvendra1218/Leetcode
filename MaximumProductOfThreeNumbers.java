@@ -6,7 +6,7 @@ public class MaximumProductOfThreeNumbers {
          * Time Complexity : O(nlogn)
          */
         //Sort the Array and then check the maximum 3 digit which can be formed from both the sides
-/*        int productFromFirst = 1;
+/*       int productFromFirst = 1;
         int productFromLast = 1;
         Arrays.sort(nums);
         productFromFirst = nums[0] * nums[1] * nums[nums.length -1];
@@ -18,7 +18,6 @@ public class MaximumProductOfThreeNumbers {
          * Approach 2: Single Scan, As per the above intuition, we need to find two minimum values and three maximum values
          * instead of sorting entire Array, let's concentrate in finding two minimum values and three maximum values
          */
-
         int min1 = Integer.MAX_VALUE;
         int min2 = Integer.MAX_VALUE;
         int max1 = Integer.MIN_VALUE;
