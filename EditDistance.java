@@ -48,7 +48,6 @@ public class EditDistance {
                 } else {
                     map[i][j] = 1 + Math.min(Math.min(map[i-1][j-1],map[i-1][j]), map[i][j-1]);
                 }
-
             }
         }
         return map[word1.length()][word2.length()];
