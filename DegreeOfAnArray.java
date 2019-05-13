@@ -1,8 +1,5 @@
 package com.raghvendra;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /*
 
 Given a non-empty array of non-negative integers nums, the degree of this array is defined as the maximum frequency of any one of its elements.
@@ -25,6 +22,10 @@ Note:
 nums.length will be between 1 and 50,000.
 nums[i] will be an integer between 0 and 49,999.
  */
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class DegreeOfAnArray {
     private class Details {
         int startIndex = 0;
