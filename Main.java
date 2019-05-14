@@ -319,8 +319,11 @@ public class Main {
 //        String IP = "172.16.254.1";
 //        ValidateIPAddress validateIPAddress =  new ValidateIPAddress();
 //        System.out.println("Output: "+ validateIPAddress.validIPAddress(IP));
-        int[] nums = {1,2,3,1,1,3,5};
-        MaximumProductOfThreeNumbers mp3nums = new MaximumProductOfThreeNumbers();
-        System.out.println("Maximum Product of Three Numbers: "+ mp3nums.maximumProduct(nums));
+//        int[] nums = {1,2,3,1,1,3,5};
+        int[] nums = {6,2,1,5,4,3,0};
+//        MaximumProductOfThreeNumbers mp3nums = new MaximumProductOfThreeNumbers();
+//        System.out.println("Maximum Product of Three Numbers: "+ mp3nums.maximumProduct(nums));
+        NextPermutation np = new NextPermutation();
+        np.nextPermutation(nums);
      }
 }
