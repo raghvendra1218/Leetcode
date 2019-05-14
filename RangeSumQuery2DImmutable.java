@@ -53,6 +53,7 @@ public class RangeSumQuery2DImmutable {
 
     /**
      * Approach 2: Caching Smarter
+     * We took the cumulative sum of Each row and col and have stored in each cell using a cache matrix, or DP matrix
      */
     private int[][] dp;
     public RangeSumQuery2DImmutable(int[][] matrix) {
