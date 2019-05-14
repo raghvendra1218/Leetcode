@@ -29,7 +29,7 @@ public class DecodeWays {
     /**
      * Solution 2: Using Dynamic Programming
      */
-    public int numDecodings(String s) {
+/*    public int numDecodings(String s) {
         int  k =  s.length();
         int result = 0;
         int[] memo  =  new int[k + 1];
@@ -67,6 +67,27 @@ public class DecodeWays {
         memo[k] = result;
 
         return result;
-    }
+    }*/
 
+    /**
+     * Approach 3:  Bottom - up Approach
+     */
+    public int numDecodings(String s) {
+        int dp[] = new int[s.length() + 1];
+        //Ways to decode an empty string , it's 1
+        dp[0] = 1;
+        //Check the first character if it's 0 then 0 ways else there will be one, because mapping starts from 1->26
+        dp[1] = (s.charAt(0) == '0') ? 0 : 1;
+        for(int i = 2; i < s.length(); ++i){
+            int oneDigit = Integer.valueOf(s.substring(i - 1, i));
+            int twoDigit = Integer.valueOf(s.substring(i - 2, i));
+            if(oneDigit >= 1){
+                dp[i] += dp[i - 1];
+            }
+            if(twoDigit >= 10 && twoDigit <= 26){
+                dp[i] += dp[i - 2];
+            }
+        }
+        return dp[s.length()];
+    }
 }
