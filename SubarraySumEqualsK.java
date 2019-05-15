@@ -1,0 +1,33 @@
+package com.raghvendra;
+
+/*
+Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+
+Example 1:
+Input:nums = [1,1,1], k = 2
+Output: 2
+Note:
+The length of the array is in range [1, 20,000].
+The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].
+ */
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class SubarraySumEqualsK {
+    public int subarraySum(int[] nums, int k) {
+        if(nums == null || nums.length == 0) return 0;
+        int totalCount = 0;
+        int cumSum = 0;
+        Map<Integer, Integer> myMap = new HashMap<>();
+        myMap.put(0,1); //Initialize for the point when cumSum equals the K hence we have found the subarray and count should be one.
+        for(int i = 0; i < nums.length; ++i){
+            cumSum += nums[i];
+            if(myMap.containsKey(cumSum - k)){
+                totalCount += myMap.get(cumSum - k);
+            }
+            myMap.put(cumSum, myMap.getOrDefault(cumSum,0) + 1);
+        }
+        return totalCount;
+    }
+}
