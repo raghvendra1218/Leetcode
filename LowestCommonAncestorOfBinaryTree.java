@@ -11,22 +11,20 @@ public class LowestCommonAncestorOfBinaryTree {
     }
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if(root == null) return null;
+        // if(root == null) return null;
         TreeNode result;
-        result = inOrder(root, p ,q);
+        result = traverse(root, p ,q);
         return result;
     }
 
-    private TreeNode inOrder(TreeNode root, TreeNode p, TreeNode q){
-        if(root != null){
-            if(root == p || root == q){
-                return root;
-            }
-            TreeNode left = inOrder(root.left, p, q);
-            TreeNode right = inOrder(root.right, p, q);
-            if(left != null && right != null) return root;
-            return (left != null) ? left : right;
+    private TreeNode traverse(TreeNode root, TreeNode p, TreeNode q){
+        if(root == null || root == p || root == q){
+            return root;
         }
-        return null;
+        TreeNode left = traverse(root.left, p, q);
+        TreeNode right = traverse(root.right, p, q);
+        if(left == null) return right;
+        if(right == null) return left;
+        return root;
     }
 }
