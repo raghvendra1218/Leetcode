@@ -51,7 +51,6 @@ public class FindMedianFromDataStream {
         } else {
             int idx = findIndex(myList, num);
             myList.add(idx, num);
-            System.out.print("List: " + myList);
         }
     }
 
