@@ -21,11 +21,11 @@ public class SubarraySumEqualsK {
         int cumSum = 0;
         Map<Integer, Integer> myMap = new HashMap<>();
         myMap.put(0,1); //Initialize for the point when cumSum equals the K hence we have found the subarray and count should be one.
-        for(int i = 0; i < nums.length; ++i){
-            cumSum += nums[i];
-            if(myMap.containsKey(cumSum - k)){
-                totalCount += myMap.get(cumSum - k);
-            }
+        for(int i : nums){
+            cumSum += i;
+//            if(myMap.containsKey(cumSum - k)){
+                totalCount += myMap.getOrDefault(cumSum - k,0);
+//            }
             myMap.put(cumSum, myMap.getOrDefault(cumSum,0) + 1);
         }
         return totalCount;
