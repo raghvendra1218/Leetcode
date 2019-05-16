@@ -27,22 +27,16 @@ import java.util.Map;
  */
 public class SubarraySumsDivisibleByK {
 /*    public int subarraysDivByK(int[] A, int K) {
-        int ans = 0;
-        //Let's initiate an array to store the cumulative sum at each index
-        int[] P = new int[A.length + 1];
-        for(int i = 0; i < P.length; i++){
-            P[i + 1] = A[i] + P[i];
+        int[] map = new int[K];
+        map[0] = 1;
+        int count = 0, sum = 0;
+        for(int a : A) {
+            sum = (sum + a) % K;
+            if(sum < 0) sum += K;  // Because -1 % 5 = -1, but we need the positive mod 4
+            count += map[sum];
+            map[sum]++;
         }
-        //initialize an array for length equal to K, trying to fit in cyclicity
-        int[] count = new int[K];
-        for(int i : P){
-            count[(i % K + K) % K] ++;
-        }
-
-        for(int n : count){
-            ans += (n * (n - 1))/2;
-        }
-        return ans;
+        return count;
     }*/
 
 /**
