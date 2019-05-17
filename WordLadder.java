@@ -48,8 +48,8 @@ public class WordLadder {
         unvisited.remove(beginWord);
         //Boundary condition, check if the endWord is there in the wordList or not, if not then return 0
         if(!unvisited.contains(endWord)) return 0;
-        //initialise a counter for keeping track of the distance for each level
-        int distance = 2;
+        //initialise a counter for keeping track of the distance for each level, initially we are at level 1
+        int distance = 1;
         myQueue.offer(beginWord);
         //Start the traversal
         while (!myQueue.isEmpty()){
@@ -67,16 +67,18 @@ public class WordLadder {
                         //create the new word in form of a string
                         String nextWord = new String(word);
                         //check the newWord in the unvisited set
-                        if(unvisited.contains(nextWord))
+                        if(unvisited.contains(nextWord)){
                             //check if this word is equal to the endWord, if yes then return distance
-                            if(nextWord.equals(endWord))
+                            if(nextWord.equals(endWord)){
+                                distance++;
                                 return distance;
-                            else{
+                            } else {
                                 //Add the nextWord in the Queue
                                 myQueue.offer(nextWord);
                                 //Remove this newWord from the Set, so that it is not checked again
                                 unvisited.remove(nextWord);
                             }
+                        }
                     }
                     word[j] = temp;
                 }
