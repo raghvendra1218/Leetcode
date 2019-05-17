@@ -44,7 +44,7 @@ public class WordLadder {
         Set<String> unvisited =  new HashSet<>(wordList);
         //Create a Queue for BFS traversal
         Queue<String> myQueue = new LinkedList<>();
-        //A check to remove the beginWord from the wordList , if present
+        //A check to remove the beginWord from the wordList, if present
         unvisited.remove(beginWord);
         //Boundary condition, check if the endWord is there in the wordList or not, if not then return 0
         if(!unvisited.contains(endWord)) return 0;
@@ -53,7 +53,7 @@ public class WordLadder {
         myQueue.offer(beginWord);
         //Start the traversal
         while (!myQueue.isEmpty()){
-            //Let's initialise the size variable because that will mark the level for traversal
+            //Let's initialise the size variable because that will mark the level for traversal, and increment distance by 1
             int size = myQueue.size();
             for(int i = 0; i < size; ++i){
                 //Convert the popped word to char array
