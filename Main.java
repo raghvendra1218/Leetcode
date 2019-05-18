@@ -320,10 +320,13 @@ public class Main {
 //        ValidateIPAddress validateIPAddress =  new ValidateIPAddress();
 //        System.out.println("Output: "+ validateIPAddress.validIPAddress(IP));
 //        int[] nums = {1,2,3,1,1,3,5};
-        int[] nums = {6,2,1,5,4,3,0};
-//        MaximumProductOfThreeNumbers mp3nums = new MaximumProductOfThreeNumbers();
-//        System.out.println("Maximum Product of Three Numbers: "+ mp3nums.maximumProduct(nums));
-        NextPermutation np = new NextPermutation();
-        np.nextPermutation(nums);
+//        int[] nums = {6,2,1,5,4,3,0};
+////        MaximumProductOfThreeNumbers mp3nums = new MaximumProductOfThreeNumbers();
+////        System.out.println("Maximum Product of Three Numbers: "+ mp3nums.maximumProduct(nums));
+//        NextPermutation np = new NextPermutation();
+//        np.nextPermutation(nums);
+        String[] emails = {"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"};
+        UniqueEmailAddresses uniqueEmailAddresses = new UniqueEmailAddresses();
+        System.out.println("Output: "+ uniqueEmailAddresses.numUniqueEmails(emails));
      }
 }
