@@ -28,7 +28,10 @@ Input: [-10,9,20,null,null,15,7]
 Output: 42
  */
 
-
+/**
+ * Intuition :  Calculate the Max sum of each branch and keep the track of the maxSum including root node of the subTree (becoz, that's
+ * the result, ultimately, we will return). But keep in mind we will not return the result in each call to calculate the path sum.
+ */
 public class BinaryTreeMaximumPathSum {
     private class TreeNode{
         int val;
