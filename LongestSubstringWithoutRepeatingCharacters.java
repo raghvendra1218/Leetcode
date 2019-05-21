@@ -32,8 +32,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
         while(j < s.length()){
             if(!mySet.contains(s.charAt(j))){
                 mySet.add(s.charAt(j));
-                j++;
                 maxLength = Math.max(maxLength, j - i);
+                j++;
             } else {
                 mySet.remove(s.charAt(i));
                 i++;
