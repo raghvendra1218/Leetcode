@@ -1,5 +1,6 @@
 package com.raghvendra;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -49,6 +50,7 @@ public class WordBreak {
                 }
             }
         }
+        System.out.println("DP Array: "+ Arrays.toString(dp));
         return dp[len];
     }
 }

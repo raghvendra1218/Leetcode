@@ -1,9 +1,5 @@
 package com.raghvendra;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -332,12 +328,16 @@ public class Main {
 //        String[] emails = {"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"};
 //        UniqueEmailAddresses uniqueEmailAddresses = new UniqueEmailAddresses();
 //        System.out.println("Output: "+ uniqueEmailAddresses.numUniqueEmails(emails));
-        BotDemolition bd = new BotDemolition();
-        List<List<Integer>> lot =  new ArrayList<>();
-        lot.add(Arrays.asList(1,1,0));
-        lot.add(Arrays.asList(1,0,9));
-        lot.add(Arrays.asList(1,1,1));
-        System.out.println(lot);
-        System.out.println("Output: "+ bd.removeObstacle(3,3,lot));
+//        BotDemolition bd = new BotDemolition();
+//        List<List<Integer>> lot =  new ArrayList<>();
+//        lot.add(Arrays.asList(1,1,0));
+//        lot.add(Arrays.asList(1,0,9));
+//        lot.add(Arrays.asList(1,1,1));
+//        System.out.println(lot);
+//        System.out.println("Output: "+ bd.removeObstacle(3,3,lot));
+//        String s = "catsandog";
+//        List<String> worDict = new ArrayList<>(Arrays.asList("cats", "dog", "sand", "and", "cat"));
+//        WordBreak wb = new WordBreak();
+//        System.out.println("Output "+ wb.wordBreak(s,worDict));
      }
 }
