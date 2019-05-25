@@ -13,7 +13,7 @@ public class LongestCommonPrefix {
                 }
                 j++;
             }
-            result = new StringBuilder(result.substring(0, j));
+            result = new StringBuilder(result.substring(0, j)); //why not J + 1 , because j has been incremented in previous statement.
         }
         return new String(result);
     }
