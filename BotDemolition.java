@@ -28,6 +28,8 @@ public class BotDemolition {
                 } else {
                     visited[row][col] = false;
                 }
+                //You can check the co-ordinates for passed source row and col and set the point of start while traversal
+                //Basically overwrite the startPoint row and col values which are most likely be sent as apart of argument
             }
         }
         Queue<Cell> queue = new LinkedList<>();
