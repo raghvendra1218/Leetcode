@@ -38,9 +38,9 @@ public class UnivaluedBinaryTree {
     public boolean isUnivalTree(TreeNode root) {
         //Check for leaf nodes also count as Unival tree
         if(root == null) return true;
-        //Check for if the left node exists, then if it's value is not equal to the root's node val then it is not a unival tree
+        //Check, if the left node exists, then if it's value is not equal to the root's node val then it is not a unival tree
         if(root.left != null && root.left.val != root.val) return false;
-        //Check for if the right node exists, then if it's value is not equal to the root's node val then it is not a unival tree
+        //Check, if the right node exists, then if it's value is not equal to the root's node val then it is not a unival tree
         if(root.right != null && root.right.val != root.val) return false;
         //Finally we need to check the root on which we are, the left sub-tree and the right sub-tree must be unival for the entire tree tree to be unival
         if(isUnivalTree(root.left) && isUnivalTree(root.right)) return true;
