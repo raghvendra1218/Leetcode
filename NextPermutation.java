@@ -17,10 +17,10 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 
 /**
  * Intuition : If we explore how the permutation is calculated, the way the permutations unfolds , temporal order gets the precedence
- * We need to find the decreasing sequence, becuase that is the sequence after which the permutations woudl have been exhausted for that number
+ * We need to find the decreasing sequence, because that is the sequence after which the permutations would have been exhausted for that number
  * 6215430 (part 5430 is strictly decreasing order, so we need to swap 1 with remaining plantings in increasing order i.e. - 0,3,4,5)
  * 0 is out because it is already been exhausted if we are talking in increasing sequence, because planting 0 will give lesser number, hence we
- * will choose the next bigger number in the increasing oder for plantings available , we will cho0se 3, we will swp 1 with 3
+ * will choose the next bigger number in the increasing oder for plantings available , we will choose 3, we will swap 1 with 3
  * 6235410
  * Now we will make the sequence in increasing order after number 3, which will be the next increasing sequence and will be the next permutation
  * 6230145
