@@ -70,7 +70,6 @@ as static/class variables are persisted across multiple test cases. Please see h
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 //public AutocompleteSystem(String[] sentences, int[] times) {
@@ -84,6 +83,7 @@ public class DesignSearchAutocompleteSystem {
         String sentence;
         int times;
         TrieNode[] branches = new TrieNode[27];
+        TrieNode(){};
         TrieNode(String sentence, int times){
             this.sentence = sentence;
             this.times = times;
@@ -94,35 +94,26 @@ public class DesignSearchAutocompleteSystem {
     private TrieNode root;
 
     public DesignSearchAutocompleteSystem(String[] sentences, int[] times) {
+        root = new TrieNode("", 0);
         int i = 0;
         for(String s : sentences){
             insert (s, times[i]);
             i++;
         }
     }
-
+    String curr_sentence = "";
     public List<String> input(char c) {
-        List<TrieNode> hotList = new ArrayList<>();
         List<String> retVal = new ArrayList<>();
-        StringBuilder curr_sentence = new StringBuilder();
         if(c == '#'){
-            insert(new String(curr_sentence),1);
-            curr_sentence = new StringBuilder();
-        }
-        curr_sentence.append(c);
-        hotList = search(new String(curr_sentence));
-
-        Collections.sort(hotList, new Comparator<TrieNode>() {
-            @Override
-            public int compare(TrieNode t1, TrieNode t2) {
-                if(t1.times > t2.times) return 1;
-                else if(t1.times < t2.times) return -1;
-                return 0;
+            insert(curr_sentence,1);
+            curr_sentence = "";
+        } else {
+            curr_sentence += c;
+            List<TrieNode> hotList = search(curr_sentence);
+            Collections.sort(hotList, (a, b) -> a.times == b.times ? a.sentence.compareTo(b.sentence) : b.times - a.times);
+            for(int i = 0; i < Math.min(3, hotList.size()); ++i){
+                retVal.add(hotList.get(i).sentence);
             }
-        });
-
-        for(int i = 0; i < hotList.size() && i < 3; ++i){
-            retVal.add(hotList.get(i).sentence);
         }
         return retVal;
     }
@@ -161,16 +152,16 @@ public class DesignSearchAutocompleteSystem {
      * search the list of elements which matches the input character
      */
     private List<TrieNode> search(String sentence){
-        List<TrieNode> list = new ArrayList<>();
+        List<TrieNode> allSent = new ArrayList<>();
         TrieNode curr = root;
         for(char c : sentence.toCharArray()){
             if(curr.branches[convert(c)] == null){
-                return list;
+                return new ArrayList <> ();
             }
             curr = curr.branches[convert(c)];
         }
 
-        List<TrieNode> allSent = new ArrayList<>();
+//        List<TrieNode> allSent = new ArrayList<>();
         lookUp(sentence, curr, allSent);
         return allSent;
     }
@@ -180,7 +171,7 @@ public class DesignSearchAutocompleteSystem {
      */
     private void lookUp(String sentence, TrieNode curr, List<TrieNode> allSent){
         if(curr.times > 0){
-            allSent.add(curr);
+            allSent.add(new TrieNode(sentence, curr.times));
         }
         for(char c = 'a'; c <= 'z'; c++){
             if(curr.branches[c - 'a'] != null){
