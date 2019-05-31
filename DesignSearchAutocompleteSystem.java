@@ -87,6 +87,7 @@ public class DesignSearchAutocompleteSystem {
         TrieNode(String sentence, int times){
             this.sentence = sentence;
             this.times = times;
+            TrieNode node = new TrieNode();
         }
     }
 
@@ -152,7 +153,6 @@ public class DesignSearchAutocompleteSystem {
      * search the list of elements which matches the input character
      */
     private List<TrieNode> search(String sentence){
-        List<TrieNode> allSent = new ArrayList<>();
         TrieNode curr = root;
         for(char c : sentence.toCharArray()){
             if(curr.branches[convert(c)] == null){
@@ -161,7 +161,7 @@ public class DesignSearchAutocompleteSystem {
             curr = curr.branches[convert(c)];
         }
 
-//        List<TrieNode> allSent = new ArrayList<>();
+        List<TrieNode> allSent = new ArrayList<>();
         lookUp(sentence, curr, allSent);
         return allSent;
     }
