@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class ZigZagArray {
     public void makeZigZag(int[] nums){
         boolean flag = true;
-        //Keep the first element as it is, becoz we cannot compare the first element with it's precceding element
+        //Keep the first element as it is, becoz we cannot compare the first element with it's preceding element
         int i = 0;
         while(i < nums.length - 1){
             if(flag){
