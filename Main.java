@@ -339,5 +339,8 @@ public class Main {
 //        List<String> worDict = new ArrayList<>(Arrays.asList("cats", "dog", "sand", "and", "cat"));
 //        WordBreak wb = new WordBreak();
 //        System.out.println("Output "+ wb.wordBreak(s,worDict));
+        int nums[] = {3,3,3,2,2,2,2};
+        ZigZagArray z = new ZigZagArray();
+        z.makeZigZag(nums);
      }
 }
