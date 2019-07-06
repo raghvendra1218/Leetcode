@@ -342,11 +342,14 @@ public class Main {
 //        int nums[] = {3,3,3,2,2,2,2};
 //        ZigZagArray z = new ZigZagArray();
 //        z.makeZigZag(nums);
-        int mat[][] = { { 1, 2, 3, 4 },
-                { 5, 6, 7, 8 },
-                { 9, 10, 11, 12 },
-                { 13, 14, 15, 16}};
-        PrintMatrixDiagonally printMatrixDiagonally = new PrintMatrixDiagonally();
-        System.out.println("Result: "+ printMatrixDiagonally.printDiagonally(mat));
+//        int mat[][] = { { 1, 2, 3, 4 },
+//                { 5, 6, 7, 8 },
+//                { 9, 10, 11, 12 },
+//                { 13, 14, 15, 16}};
+//        PrintMatrixDiagonally printMatrixDiagonally = new PrintMatrixDiagonally();
+//        System.out.println("Result: "+ printMatrixDiagonally.printDiagonally(mat));
+        int[] nums = {1,4,4,3,2,8,2,1,6,2};
+        FindMissingInArrayWithDuplicates fm =  new FindMissingInArrayWithDuplicates();
+        fm.findMissing(nums);
      }
 }

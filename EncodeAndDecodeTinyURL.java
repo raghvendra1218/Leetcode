@@ -55,7 +55,7 @@ import java.util.Random;
 }*/
 
 /**
- * Approach 3 : Using HashMap + Random Generator - Advantages very less collision and the URL will be sortened to just 6 bits
+ * Approach 3 : Using HashMap + Random Generator - Advantages very less collision and the URL will be shortened to just 6 bits
  * Intuition : We will use possible valid alphanumeric chars and they sum up to 64 in total (0-9 + a-z + A-Z)
  * Advantages : The number of URLs that can be encoded is quite large in this case, nearly of the order (10+26*2)^6.
  *              The length of the encoded URLs is fixed to 6 units, which is a significant reduction for very large URLs.
