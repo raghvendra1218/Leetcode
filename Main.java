@@ -356,6 +356,6 @@ public class Main {
         int item = 4;
         int maxWeightOfBag = 11;
         KnapsackProblem_0_1 kp1 = new KnapsackProblem_0_1();
-        System.out.println("Output:"+ kp1.knapsack(wts,prices,maxWeightOfBag,item));
+        System.out.println("Output:"+ kp1.knapsackBottomUp(wts,prices,maxWeightOfBag,item));
      }
 }

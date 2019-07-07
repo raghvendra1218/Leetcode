@@ -37,4 +37,31 @@ public class KnapsackProblem_0_1 {
 
         return Math.max(include,exclude);
     }
+
+    /**
+     * Approach 2: Using Dynamic Programming
+     *
+     */
+    public int knapsackBottomUp(int[] wts, int[] prices, int W, int N){
+        int[][] dp = new int[N + 1][W + 1];
+
+        //Initialize the zeroth row and col with value 0, because if there is no item or there is no weight we cannot make any price
+        //For rest of the weights and values we will find the include and exclude and return the max out of em.
+        for(int i = 0; i <=N; ++i){
+            for(int weight = 0; weight <=W; ++weight){
+                if(i == 0 || weight == 0){
+                    dp[i][weight] = 0;
+                } else {
+                    int include = 0, exclude = 0;
+                    if(wts[i - 1] <= weight){
+                       include = prices[i - 1] + dp[i - 1][weight - wts[i - 1]];
+                   }
+                    exclude = dp[i -1][weight];
+
+                    dp[i][weight] = Math.max(include,exclude);
+                }
+            }
+        }
+        return dp[N][W];
+    }
 }
