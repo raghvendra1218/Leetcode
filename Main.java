@@ -348,8 +348,14 @@ public class Main {
 //                { 13, 14, 15, 16}};
 //        PrintMatrixDiagonally printMatrixDiagonally = new PrintMatrixDiagonally();
 //        System.out.println("Result: "+ printMatrixDiagonally.printDiagonally(mat));
-        int[] nums = {1,4,4,3,2,8,2,1,6,2};
-        FindMissingInArrayWithDuplicates fm =  new FindMissingInArrayWithDuplicates();
-        fm.findMissing(nums);
+//        int[] nums = {1,4,4,3,2,8,2,1,6,2};
+//        FindMissingInArrayWithDuplicates fm =  new FindMissingInArrayWithDuplicates();
+//        fm.findMissing(nums);
+        int[] wts = {2,7,3,4};
+        int[] prices = {5,20,20,10};
+        int item = 4;
+        int maxWeightOfBag = 11;
+        KnapsackProblem_0_1 kp1 = new KnapsackProblem_0_1();
+        System.out.println("Output:"+ kp1.knapsack(wts,prices,maxWeightOfBag,item));
      }
 }
