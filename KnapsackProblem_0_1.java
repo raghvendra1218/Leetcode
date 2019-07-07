@@ -6,6 +6,8 @@ package com.raghvendra;
  * Also given an integer W which represents knapsack capacity,
  * find out the maximum value subset of val[] such that sum of the weights of this subset is smaller than or equal to W.
  * You cannot break an item, either pick the complete item, or don’t pick it (0-1 property).
+ * Note: In case when a user can pick the same time anytime, means infinite supply of the items in the item list, then in teh solution,
+ * we will just replace N -1 with N while making the recursive call and dp[i - 1] to dp[i] in the DP approach while inclusion of item
  */
 
 public class KnapsackProblem_0_1 {
@@ -53,9 +55,11 @@ public class KnapsackProblem_0_1 {
                     dp[i][weight] = 0;
                 } else {
                     int include = 0, exclude = 0;
+                    //Including price of current item
                     if(wts[i - 1] <= weight){
                        include = prices[i - 1] + dp[i - 1][weight - wts[i - 1]];
                    }
+                    //Excluding price of current item
                     exclude = dp[i -1][weight];
 
                     dp[i][weight] = Math.max(include,exclude);
