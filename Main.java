@@ -351,11 +351,15 @@ public class Main {
 //        int[] nums = {1,4,4,3,2,8,2,1,6,2};
 //        FindMissingInArrayWithDuplicates fm =  new FindMissingInArrayWithDuplicates();
 //        fm.findMissing(nums);
-        int[] wts = {2,7,3,4};
-        int[] prices = {5,20,20,10};
-        int item = 4;
-        int maxWeightOfBag = 11;
-        KnapsackProblem_0_1 kp1 = new KnapsackProblem_0_1();
-        System.out.println("Output:"+ kp1.knapsackBottomUp(wts,prices,maxWeightOfBag,item));
+//        int[] wts = {2,7,3,4};
+//        int[] prices = {5,20,20,10};
+//        int item = 4;
+//        int maxWeightOfBag = 11;
+//        KnapsackProblem_0_1 kp1 = new KnapsackProblem_0_1();
+//        System.out.println("Output:"+ kp1.knapsackBottomUp(wts,prices,maxWeightOfBag,item));
+        int[] arrival = {1, 2, 10, 5, 5};
+        int[] exit = {4, 5, 12, 9, 12};
+        MaximumIntervalsOverlap io = new MaximumIntervalsOverlap();
+        io.findMaxGuest(arrival,exit);
      }
 }
