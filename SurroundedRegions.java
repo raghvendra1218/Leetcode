@@ -24,6 +24,13 @@ package com.raghvendra;
  * Two cells are connected if they are adjacent cells connected horizontally or vertically.
  */
 
+/**
+ * Approach: is to convert all the 'O' to some other symbol in my case i have chosen as '*'
+ * We will check for the first row, last Row , first col and last col and check if there are O's and connected O's we will convert them
+ * to '*' by traversing using DFS
+ * Once converted we will replace the leftovers 'O' to 'X' in the modified board
+ */
+
 public class SurroundedRegions {
     public void solve(char[][] board) {
         //Edge case
