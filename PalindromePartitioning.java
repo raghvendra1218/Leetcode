@@ -39,10 +39,10 @@ public class PalindromePartitioning {
         }
         for(int i = 1; i<= s.length(); ++i){
             String temp = s.substring(0,i);
-            if(!checkPalindrome(temp)) continue;
-            tempList.add(temp);
-            backtrack(s.substring(i, s.length()),result,tempList);
-            tempList.remove(tempList.size() - 1);
+            if(!checkPalindrome(temp)) continue; // only do backtracking when current string is palindrome
+            tempList.add(temp); // choose
+            backtrack(s.substring(i, s.length()),result,tempList); // explore
+            tempList.remove(tempList.size() - 1); // unchoose
         }
         return;
     }
