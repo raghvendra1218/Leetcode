@@ -58,7 +58,13 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         return root;
     }*/
 
-    //We can optimize finding the index of the current node by putting the values and index in a map
+    /**
+     * Approach 2: We can optimize finding the index of the current node by putting the values and index in a map
+     * @param preorder
+     * @param inorder
+     * @return
+     */
+
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         // PreOrder --> Root, Left, Right
         // InOrder --> Left, Root, Right
