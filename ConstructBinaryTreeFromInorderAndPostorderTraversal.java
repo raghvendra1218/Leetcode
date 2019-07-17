@@ -49,6 +49,12 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         return root;
     }*/
 
+    /**
+     * Approach 2: Optimizing it through HashMap by storing values and Index for inorder array
+     * @param inorder
+     * @param postorder
+     * @return
+     */
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         //InOrder --> Left, Root, Right
         //PostOrder --> Left, Right, Root
