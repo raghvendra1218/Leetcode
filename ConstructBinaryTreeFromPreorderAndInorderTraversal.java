@@ -90,5 +90,4 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         root.right = helper(preStart + (currRootIdx - inStart + 1), currRootIdx + 1, inEnd, myMap, inorder, preorder);
         return root;
     }
-
 }
