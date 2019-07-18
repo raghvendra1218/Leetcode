@@ -44,6 +44,7 @@ public class AsteroidCollision {
     public int[] asteroidCollision(int[] asteroids) {
         Stack<Integer> myStack = new Stack<>();
         for(int i = 0; i < asteroids.length; ++i){
+            //Condition for a collision
             collision : {
                 int num = asteroids[i];
                 while(!myStack.isEmpty() && num < 0 && myStack.peek() > 0){
