@@ -33,12 +33,12 @@ package com.raghvendra;
 public class AtleastTwiceInArray {
     public int dominantIndex (int[] nums) {
         int index = 0;
-        int max = 0;
-        if(nums.length <=1) {
+        int max = nums[0];
+        if(nums.length <= 1) {
             return index;
         }
         //find the largest number in the array
-        for(int i =0 ; i < nums.length; i++) {
+        for(int i = 1 ; i < nums.length; i++) {
             if(nums[i] > max) {
                 max = nums[i];
                 index = i;
