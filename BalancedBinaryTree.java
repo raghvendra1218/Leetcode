@@ -43,8 +43,7 @@ public class BalancedBinaryTree {
 
     public boolean isBalanced(TreeNode root) {
         //Keeping -1 as a measure to check if the tree is balanced or not
-        if(depth(root) != -1) return true;
-        return false;
+        return (depth(root) != -1);
     }
 
     private int depth(TreeNode root){
