@@ -65,14 +65,11 @@ public class BattleshipsInABoard {
      * We can check for first cells by only counting cells that do not have an 'X' to the left and do not have an 'X' above them.
      */
     public int countBattleships(char[][] board) {
-        int row = 0;
-        int col = 0;
         int numBattleShips = 0;
         int lastRow = board.length - 1;
         int lastCol = board[0].length - 1;
-
-        for(row = 0; row <= lastRow; row++){
-            for(col = 0; col <= lastCol; col++){
+        for(int row = 0; row <= lastRow; row++){
+            for(int col = 0; col <= lastCol; col++){
                 if(board[row][col] == '.'){
                     continue;
                 }
