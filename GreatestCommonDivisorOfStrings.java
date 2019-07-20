@@ -8,7 +8,7 @@ public class GreatestCommonDivisorOfStrings {
      * @param str2
      * @return
      */
-    public String gcdOfStrings(String str1, String str2) {
+/*    public String gcdOfStrings(String str1, String str2) {
         if(str1 == null || str2 == null || str1.length() == 0 || str2.length() == 0) return "";
         //Check the smaller length string
         int lengthstr1 = str1.length();
@@ -36,16 +36,31 @@ public class GreatestCommonDivisorOfStrings {
 
         }
         return "";
-    }
+    }*/
 
     /**
      * Approach 2: Recursive Solution, more efficient
+     * Step 1: Identify the shorter among the two, and check if the longer exactly contains the entire shorter, if not return "",
+     * else continue to shorten it with the length of the shorter string till one of them becomes empty.
+     *
+     * If longer string starts with shorter string, cut off the common prefix part of the longer string;
+     * repeat till one is empty, then the other is gcd string;
+     * If the longer string does NOT start with the shorter one, there is no gcd string
      * @param str1
      * @param str2
      * @return
      */
 
-//    public String gcdOfStrings(String str1, String str2) {
-//
-//    }
+    public String gcdOfStrings(String str1, String str2) {
+        if(str1.length() < str2.length()){
+            return gcdOfStrings(str2, str1);  //make sure str1 is always larger than str2
+        }
+        else if(!str1.startsWith(str2)){    // if the longer string does not contain entire str2 , then return empty string
+            return "";
+        }else if(str2.isEmpty()){  // once the smaller string becomes empty, it means we have found the smallest chunk which comprises both the strings str1 and str2, that is our desired result
+            return str1;  //gcd of string found
+        }else {
+            return gcdOfStrings(str1.substring(str2.length()), str2); //cut the common prefix from the long string
+        }
+    }
 }
