@@ -1,5 +1,7 @@
 package com.raghvendra;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -357,9 +359,14 @@ public class Main {
 //        int maxWeightOfBag = 11;
 //        KnapsackProblem_0_1 kp1 = new KnapsackProblem_0_1();
 //        System.out.println("Output:"+ kp1.knapsackBottomUp(wts,prices,maxWeightOfBag,item));
-        int[] arrival = {1, 2, 10, 5, 5};
-        int[] exit = {4, 5, 12, 9, 12};
-        MaximumIntervalsOverlap io = new MaximumIntervalsOverlap();
-        io.findMaxGuest(arrival,exit);
+//        int[] arrival = {1, 2, 10, 5, 5};
+//        int[] exit = {4, 5, 12, 9, 12};
+//        MaximumIntervalsOverlap io = new MaximumIntervalsOverlap();
+//        io.findMaxGuest(arrival,exit);
+        String s = "Anjali Dixit";
+        char[] input = s.toCharArray();
+        ReverseStringAnjali rev  = new ReverseStringAnjali();
+        rev.reverseString(input);
+        System.out.println("Output: " + Arrays.toString(input));
      }
 }
