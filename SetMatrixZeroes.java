@@ -3,7 +3,7 @@ package com.raghvendra;
 public class SetMatrixZeroes {
 
     /**
-     * Approach 1: we can take a seperate matrix of m * n size and initialise all the menets to FALSE
+     * Approach 1: we can take a separate matrix of m * n size and initialise all the menets to FALSE
      * and while traversing the original matrix set the elements in auxiliary matrix to true where zero occurs
      * At last traverse through the Auxiliary matrix and set the elements(rows/cols) in the original matrix to 0
      * Space Complexity : O(m *n)
