@@ -22,4 +22,12 @@ For example, given the above Employee table, the query should return 200 as the 
 /**
   Write your MySQL query statement below
 **/
-Select DISTINCT Salary as SecondHighestSalary from Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1;
+# Select DISTINCT Salary as SecondHighestSalary from Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1;
+SELECT
+  (SELECT DISTINCT
+     Salary
+   FROM
+     Employee
+   ORDER BY Salary DESC
+   LIMIT 1 OFFSET 1) AS SecondHighestSalary
+;
