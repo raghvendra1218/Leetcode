@@ -363,10 +363,5 @@ public class Main {
 //        int[] exit = {4, 5, 12, 9, 12};
 //        MaximumIntervalsOverlap io = new MaximumIntervalsOverlap();
 //        io.findMaxGuest(arrival,exit);
-        String s = "Anjali Dixit";
-        char[] input = s.toCharArray();
-        ReverseStringAnjali rev  = new ReverseStringAnjali();
-        rev.reverseString(input);
-        System.out.println("Output: " + Arrays.toString(input));
      }
 }
