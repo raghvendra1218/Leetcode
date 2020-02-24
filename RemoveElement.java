@@ -63,6 +63,7 @@ public class RemoveElement {
         int start = 0;
         int n = nums.length;
         while(start < n) {
+            //swap the current element out with the last element and dispose the last one
             if(nums[start] == val) {
                 nums[start] = nums[n - 1];
                 //reduce the length by 1
