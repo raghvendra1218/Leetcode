@@ -49,7 +49,7 @@ public class SubtreeOfAnotherTree {
         return isSubtree(s.left, t) || isSubtree(s.right, t);
     }
 
-    //Inorder traversal of a given Binary Tree
+    //traverse Binary tree considering every node as root and check to see if the subtree and tree t are same or not
     private boolean isSame(TreeNode s, TreeNode t) {
         if (s == null && t == null) {
             return true;
