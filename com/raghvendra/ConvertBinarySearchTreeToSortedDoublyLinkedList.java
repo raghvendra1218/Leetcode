@@ -86,8 +86,43 @@ public class ConvertBinarySearchTreeToSortedDoublyLinkedList {
     /**
      * Solution 2: Doing it in-place, without having to create an additional List
      */
-    Node prev = null;
+    Node first = null;
+    Node last = null;
     public Node treeToDoublyList2(Node root) {
+        if(root == null) return null;
+        helper(root);
+        //Make it circular linked List
+        last.right = first;
+        first.left = last;
+        return first;
+    }
+
+    private void helper(Node node) {
+        if(node != null) {
+            //Traverse to the extreme left
+            helper(node.left);
+            //If there are more than one nodes traversed, that will imply last is not null and it is safe to weave the node
+            if(last != null) {
+                //Link the previous node (last), with the current node (node)
+                last.right = node;
+                node.left = last;
+            } else {
+                //keep the head node to link the last node, later
+                //This block will run only once, during the first run, when last is null
+                first = node;
+            }
+            //assign the current node to last
+            last = node;
+            //right
+            helper(node.right);
+        }
+    }
+
+    /**
+     * Solution 3: Doing it in-place, without having to create an additional List
+     */
+    Node prev = null;
+    public Node treeToDoublyList3(Node root) {
         if (root == null) return null;
         Node dummy = new Node();
         prev = dummy;
