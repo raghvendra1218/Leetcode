@@ -82,4 +82,30 @@ public class ConvertBinarySearchTreeToSortedDoublyLinkedList {
             inOrderTraversalOfBSTWithListCreation(node.right, head, tail);
         }
     }
+
+    /**
+     * Solution 2: Doing it in-place, without having to create an additional List
+     */
+    Node prev = null;
+    public Node treeToDoublyList2(Node root) {
+        if (root == null) return null;
+        Node dummy = new Node();
+        prev = dummy;
+        inOrderTraversalOfBST(root);
+        //Join the last node(which is left to tail) to the first node(which is right to head), in order to make it circular
+        prev.right = dummy.right;
+        dummy.right.left = prev;
+        return dummy.right;
+    }
+
+    //Traverse Binary Search tree and add the connections
+    private void inOrderTraversalOfBST(Node curr) {
+        if(curr != null){
+            inOrderTraversalOfBST(curr.left);
+            prev.right = curr;
+            curr.left = prev;
+            prev = curr;
+            inOrderTraversalOfBST(curr.right);
+        }
+    }
 }
