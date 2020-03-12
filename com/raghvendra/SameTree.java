@@ -48,19 +48,19 @@ public class SameTree {
     /**
      *Approach 1: Recursive Solution, for each node we can check if it's left sub tree is equal to the right subtree
      */
-/*    public boolean isSameTree(TreeNode p, TreeNode q) {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
         if(p == null && q == null) return true;
         if(p == null || q == null) return false;
         if(p.val != q.val) return false;
         if(p.val == q.val)
             return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
         return false;
-    }*/
+    }
 
     /**
      *Approach 2: Iterative Solution, We can do a pre-order traversal for both the trees and check the node value at each nodes
      */
-    public boolean isSameTree(TreeNode p, TreeNode q) {
+    public boolean isSameTreeII(TreeNode p, TreeNode q) {
         if(p == null && q == null) return  true;
         if(p == null || q == null) return false;
         Stack<TreeNode> treeStackP = new Stack<>();
