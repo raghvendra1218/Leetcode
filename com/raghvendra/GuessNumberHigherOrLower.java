@@ -26,7 +26,9 @@ class GuessGame {
         return -1;
     }
 }
-
+/**
+ * Approach : Simple Binary Search
+ */
 public class GuessNumberHigherOrLower extends GuessGame{
     public int guessNumber(int n) {
         int start = 1;
