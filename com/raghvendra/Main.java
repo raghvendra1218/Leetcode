@@ -1,6 +1,7 @@
 package com.raghvendra;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -363,5 +364,16 @@ public class Main {
 //        int[] exit = {4, 5, 12, 9, 12};
 //        MaximumIntervalsOverlap io = new MaximumIntervalsOverlap();
 //        io.findMaxGuest(arrival,exit);
+//        String [] str = new String[] {"000", "1110", "01", "001", "110", "11"};
+//        BinaryAutocomplete binaryAutocomplete = new BinaryAutocomplete();
+//        int [] result = new int[str.length];
+//        for( int i = 0; i < str.length; ++i) {
+//            result[i] = binaryAutocomplete.insertAndSearch(str[i], i);
+//        }
+//        System.out.println(Arrays.toString(result));
+        String[] words = {"hello","leetcode"};
+        String order = "hlabcdefgijkmnopqrstuvwxyz";
+        VerifyingAnAlienDictionary vadict = new VerifyingAnAlienDictionary();
+        System.out.println(vadict.isAlienSorted(words, order));
      }
 }
