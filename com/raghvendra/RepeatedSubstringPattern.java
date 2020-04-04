@@ -45,6 +45,10 @@ public class RepeatedSubstringPattern {
 
                 //Loop until num_repeats to form the string out of this substring
                 StringBuilder sb = new StringBuilder(); //to store the result of the concatenated substring
+
+//                sb.append(substr.repeat(num_repeats)); //Somehow this improves time complexity, rather than using the for loop below
+
+                /* OR */
                 for(int j = 1; j <= num_repeats; ++j) { //notice j = 1, because it's counter of repeats it cannot start from 0
                     sb.append(substr);
                 }
