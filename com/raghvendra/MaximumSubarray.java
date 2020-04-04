@@ -15,20 +15,15 @@ package com.raghvendra;
 
 public class MaximumSubarray {
     public int maxSubArray(int[] nums) {
-        int i = 0;
-        int max = Integer.MIN_VALUE;
-        int sum = 0;
-
-        while(i < nums.length){
-            if(sum < 0){
+        int maxSum = nums[0];
+        int sum = nums[0];
+        for(int i = 1; i < nums.length; ++i) {
+            if(sum < 0) {
                 sum = 0;
             }
             sum += nums[i];
-            if(max < sum){
-                max = sum;
-            }
-            i++;
+            maxSum = Math.max(sum, maxSum);
         }
-        return max;
+        return maxSum;
     }
 }
