@@ -49,4 +49,30 @@ public class RansomNote {
         }
         return characterMap;
     }
+
+    /**
+     * Approach 2:  Creating Map for magazine and then check if all the characters in note can be found inside magazine map
+     */
+    public boolean canConstructII(String ransomNote, String magazine) {
+        HashMap<Character, Integer> ransomNoteLetterMap = createLetterMap(ransomNote);
+        HashMap<Character, Integer> magazineNoteLetterMap = createLetterMap(magazine);
+
+        //Iterate over the ransom note map and check if the corresponding key values are found in the magazine map
+        for(Map.Entry mapElement : ransomNoteLetterMap.entrySet()) {
+            if(!magazineNoteLetterMap.containsKey(mapElement.getKey()) || (int)mapElement.getValue() > magazineNoteLetterMap.get(mapElement.getKey())) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private HashMap<Character, Integer> createLetterMap(String S) {
+        HashMap<Character, Integer> letterMap = new HashMap<>();
+
+        //traverse through string S and create letterMap
+        for(char c : S.toCharArray()) {
+            letterMap.put(c, letterMap.getOrDefault(c, 0) + 1);
+        }
+        return letterMap;
+    }
 }
