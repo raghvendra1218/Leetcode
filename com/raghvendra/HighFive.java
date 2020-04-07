@@ -30,6 +30,7 @@ import java.util.*;
 
 public class HighFive {
     public int[][] highFive(int[][] items) {
+        if (items == null || items.length == 0) return items;
         Map<Integer, ArrayList<Integer>> scoreMap = new HashMap<>();
         for(int[] score: items) {
             if(!scoreMap.containsKey(score[0])) scoreMap.put(score[0], new ArrayList(5));
