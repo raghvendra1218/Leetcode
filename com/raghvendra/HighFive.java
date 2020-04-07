@@ -45,16 +45,16 @@ public class HighFive {
             }
         }
         int[][] result = new int [scoreMap.size()][2];
-        int idx = 0;
+        int idx = 0, sum = 0;
         for(Map.Entry mapElement: scoreMap.entrySet()) {
             int key = (int) mapElement.getKey();
             List<Integer> listValue = (List<Integer>) mapElement.getValue();
-            int sum = 0;
             for(int val : listValue) {
                 sum += val;
             }
             result[idx][0] = key;
             result[idx][1] = sum/5;
+            sum = 0;
             idx++;
         }
         return result;
