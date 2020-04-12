@@ -18,10 +18,26 @@ package com.raghvendra;
  * Then 4 is the first bad version.
  */
 
-public class FirstBadVersion {
+/* The isBadVersion API is defined in the parent class VersionControl.
+      boolean isBadVersion(int version);
+*/
+
+/**
+ * This class is kept here as dummy do not consider it as part of the solution
+ * This was to suppress error in my IDE, which I was getting for isBadVersion() API
+ */
+class VersionControl {
+    public boolean isBadVersion(int versionNumber) {
+        //Logic of the API
+        return true;
+    }
+}
+
+public class FirstBadVersion extends VersionControl{
     /**
      * Approach 1: Binary Search
      */
+
     public int firstBadVersion(int n) {
         int start = 1;
         int end = n;
