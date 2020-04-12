@@ -33,7 +33,7 @@ class VersionControl {
     }
 }
 
-public class FirstBadVersion extends VersionControl{
+public class FirstBadVersion extends VersionControl {
     /**
      * Approach 1: Binary Search
      */
