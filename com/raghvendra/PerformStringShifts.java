@@ -65,7 +65,7 @@ public class PerformStringShifts {
             char c = sb.charAt(0);
             sb.deleteCharAt(0);
             sb.append(c);
-            moves++;
+            moves--;
         }
     }
 
@@ -76,7 +76,49 @@ public class PerformStringShifts {
             char c = sb.charAt(len - 1);
             sb.deleteCharAt(len - 1);
             sb.insert(0, c);
-            moves++;
+            moves--;
+        }
+    }
+
+    /**
+     * Approach 2: Compute net Left and right shift, infact net shift it will be either left/right/no-shift at the end.
+     */
+    public String stringShiftII(String s, int[][] shift) {
+        StringBuilder sb = new StringBuilder(s);
+        int netShift = 0;
+        for(int[] oneShift : shift) {
+            netShift += (oneShift[0] == 0)? -oneShift[1] : oneShift[1];
+        }
+        //if netShift is -ve then it means we need to do left shift, if netShift is +ve then we will do right shift.
+        if(netShift != 0) {
+            if (netShift < 0) {
+                leftShiftII(sb, Math.abs(netShift)); //we don't want that our moves go in negative to helper function
+            } else {
+                rightShiftII(sb, netShift);
+            }
+        }
+        return sb.toString();
+    }
+
+    private void leftShiftII(StringBuilder sb, int i) {
+        int len = sb.length();
+        int moves = i % len;
+        while(moves != 0) {
+            char c = sb.charAt(0);
+            sb.deleteCharAt(0);
+            sb.append(c);
+            moves--;
+        }
+    }
+
+    private void rightShiftII( StringBuilder sb, int i) {
+        int len = sb.length();
+        int moves = i % len;
+        while(moves != 0) {
+            char c = sb.charAt(len - 1);
+            sb.deleteCharAt(len - 1);
+            sb.insert(0, c);
+            moves--;
         }
     }
 }
