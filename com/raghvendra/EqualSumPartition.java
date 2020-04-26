@@ -1,6 +1,13 @@
 package com.raghvendra;
 
 /**
+ * Equal Sum Partition Problem
+ * Partition problem is to determine whether a given set can be partitioned into two subsets such that the sum of elements in both subsets is same.
+ * Examples:
+ *
+ * arr[] = {1, 5, 11, 5}
+ * Output: true
+ * The array can be partitioned as {1, 5, 5} and {11}
  * Are there two sets which have both sum equal?
  * Example nums : {1, 5, 11, 5}, result : True
  * Example nums : {1, 8, 10, 2} result : false
