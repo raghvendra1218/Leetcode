@@ -1,7 +1,6 @@
 package com.raghvendra;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher's h-index.
@@ -22,17 +21,17 @@ import java.util.Collections;
 
 public class H_Index {
     public int hIndex(int[] citations) {
-//        //Sort the array
-////        if (citations == null || citations.length == 0) return 0;
-////        Integer[] citationsObj = Arrays.stream (citations).boxed().toArray(Integer[]::new);
-////        Arrays.sort(citationsObj, Collections.reverseOrder());
-////        for(int idx = 0; idx < citations.length; ++idx) {
-////            if(citations[idx] < idx + 1) {
-////                return idx;
-////            }
-////        }
-////        //This case occurs when all the values on the index is greater then the respective index values
-////        return citations.length;
+        //Sort the array
+//        if (citations == null || citations.length == 0) return 0;
+//        Integer[] citationsObj = Arrays.stream (citations).boxed().toArray(Integer[]::new);
+//        Arrays.sort(citationsObj, Collections.reverseOrder());
+//        for(int idx = 0; idx < citations.length; ++idx) {
+//            if(citations[idx] < idx + 1) {
+//                return idx;
+//            }
+//        }
+//        //This case occurs when all the values on the index is greater then the respective index values
+//        return citations.length;
 
         //Second approach, saving time complexity and space complexity
         Arrays.sort(citations);
