@@ -40,6 +40,7 @@ public class NumbersWithSameConsecutiveDifferences {
         List<Integer> result = new ArrayList<>();
         if (N == 1) result.add(0);
         for(int d = 1; d < 10; ++d) {
+            //Since we have already added one digit, hence we are sending N-1
             dfs(d, N - 1, K, result);
         }
 
