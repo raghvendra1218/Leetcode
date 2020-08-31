@@ -23,7 +23,6 @@ public class FindRightInterval {
         // Prepare a sorted list of intervals
         int idx = 0;
         for(int[]e : intervals){
-            System.out.println(Arrays.toString(e));
             Interval i = new Interval(e[0], e[1], idx);
             sortedListOfIntervals.add(i);
             idx++;
