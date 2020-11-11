@@ -19,10 +19,12 @@ public class FindWinnerOnATicTacToeGame {
             // A moves
             if (i % 2 == 0) {
                 // condition where A wins
-                if(++aRow[r] == 3 || ++aCol[c] == 3 || r == c && ++aDiag == 3 || r + c == 2 && ++aAntiDiag == 3) return "A";
+                if (++aRow[r] == 3 || ++aCol[c] == 3 || r == c && ++aDiag == 3 || r + c == 2 && ++aAntiDiag == 3)
+                    return "A";
             } else { // B moves
                 // condition where B wins
-                if(++bRow[r] == 3 || ++bCol[c] == 3 || r == c && ++bDiag == 3 || r + c ==2 && ++bAntiDiag == 3) return "B";
+                if (++bRow[r] == 3 || ++bCol[c] == 3 || r == c && ++bDiag == 3 || r + c == 2 && ++bAntiDiag == 3)
+                    return "B";
             }
         }
 
